@@ -1,0 +1,37 @@
+{
+  "name": "apocalypsegameui",
+  "authors": [
+    "Iván Bravo Bravo <ivan-bravo@woots.mx>"
+  ],
+  "description": "Lista de <assets> para el GameUI de Apocalypse",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "http://assets.woots.mx",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bulma": "^0.4.2",
+    "firebase": "^4.1.2",
+    "google-map": "GoogleWebComponents/google-map#~1.0.3",
+    "google-url-shortener": "GoogleWebComponents/google-url-shortener#~1.0.1",
+    "google-youtube": "GoogleWebComponents/google-youtube#~1.1.2",
+    "html5shiv": "~3.7.3",
+    "normalize-css": "normalize.css#~3.0.3",
+    "animate.css": "^3.5.2",
+    "flat-ui": "^2.3.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "linkifyjs": "^2.1.4",
+    "urijs": "^1.18.10",
+    "js-cookie": "^2.1.4",
+    "jquery-selectric": "^1.11.1"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Menu</title>    
+
+    <link rel="stylesheet" type="text/css" href="assets/libs/bulma/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/animate.css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/jquery-selectric/public/selectric.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"> 
+</head>
+<body>
+    <div class="fullscreen-bg">
+        <video id="background-video" muted loop></video>
+    </div>
+
+    <div id="gameui">
+        <main-menu ref="mainmenu"></main-menu>
+        <loading ref="loading"></loading>
+        <paused-menu ref="pausemenu"></paused-menu>
+    </div>
+
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/jquery-selectric/public/jquery.selectric.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="assets/js/mod.js"></script>
+    <script src="assets/js/ui.js"></script>    
+</body>
+</html>

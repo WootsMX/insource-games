@@ -19,6 +19,8 @@
 /models/.hammer.mdlcache/
 /modelsrc/
 /old_core/
+/resource/gameui/assets/libs/
+/save/
 /scenes/
 /sound/
 /vprof/
@@ -50,3 +52,6 @@ decompiled 0.44
 *.vbsp
 *.cache
 *.rad
+*.svg
+*.xcf
+*.psd

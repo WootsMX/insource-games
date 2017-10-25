@@ -1,0 +1,206 @@
+<div class="main-menu" v-show="!game.inGame && loading.type === 'none'">
+	<nav>
+		<a href="#" data-section="start-game" data-help="#GameUI_Help_StartGame" data-translate>#GameUI_StartGame</a>
+		<a href="#" data-open-window="#options" data-help="#GameUI_Help_Options" data-translate>#GameUI_Options</a>
+		<a href="#" data-section="database" data-help="#GameUI_Help_Database" data-translate>#GameUI_Database</a>
+		<a href="#" data-action="quit" data-help="#GameUI_Help_Quit" data-translate>#GameUI_Quit</a>
+		<a href="#" data-action="reload" data-help="#GameUI_Help_RestartUI" data-translate>#GameUI_RestartUI</a>
+	</nav>
+
+	<div class="panel-content">
+		<!-- Información del jugador en Steam -->
+		<div class="player-info">
+			<div class="columns">
+				<figure class="avatar">
+					<img :src="playerinfo.avatarFull" :alt="steam.playerName" />	
+				</figure>
+
+				<div class="info column">
+					<span class="playername">
+						<label data-translate>#GameUI_Greeting</label> {{ steam.playerName }}.
+					</span>
+					<span class="battery" v-show="steam.batteryPower != 255">
+						<label data-translate>#GameUI_Battery</label>: {{ steam.batteryPower }}%
+					</span>
+					<span class="country">
+						<label data-translate>#GameUI_ConnectedFrom</label>: {{ steam.country }}
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Panel para comenzar una partida -->
+		<section id="start-game">
+			<div class="mode-select">
+				<h3 data-translate>#GameUI_Mode_Select</h3>
+
+				<div class="columns">
+					<div class="column">
+						<a href="#" data-gamemode="1" data-multiplayer="false" data-help="#GameUI_Help_GameMode_SOLO">
+							<img src="assets/images/modes/single.png" />
+							<span data-translate>#GameUI_GameMode_SOLO</span>
+						</a>
+					</div>
+
+					<div class="column">
+						<a href="#" data-gamemode="2" data-multiplayer="true" data-help="#GameUI_Help_GameMode_COOP">
+							<img src="assets/images/modes/coop.png" />
+							<span data-translate>#GameUI_GameMode_COOP</span>
+						</a>
+					</div>
+
+					<div class="column">
+						<a href="#" data-gamemode="3" data-multiplayer="true" data-help="#GameUI_Help_GameMode_VS">
+							<img src="assets/images/modes/teams.png" />
+							<span data-translate>#GameUI_GameMode_VS</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="game-config">
+				<div class="columns">
+					<div class="column is-4" data-visible="multiplayer">
+						<div class="field">
+							<label data-translate>#GameUI_Hostname</label>
+							<p class="control">
+								<input class="input is-medium" data-help="#GameUI_Help_Hostname" data-command="hostname" />
+							</p>
+						</div>
+					</div>
+
+					<div class="column is-4">
+						<div class="field">
+							<label data-translate>#GameUI_Difficulty</label>
+							<p class="control">
+								<select data-command="sv_difficulty" data-help="#GameUI_Help_Difficulty">
+									<option value="1">Safe</option>
+									<option value="2">Euclid</option>
+									<option value="3">Keter</option>
+									<option value="4">XK-Class</option>
+								</select>
+							</p>
+						</div>
+					</div>
+
+					<div class="column is-4">
+						<div class="field">
+							<label data-translate>#GameUI_Seed</label>
+							<p class="control">
+								<input id="gameseed" class="input is-medium" data-help="#GameUI_Help_Seed" />
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="columns">
+					<div class="column is-4 is-offset-one-quarter">
+						<button class="button is-dark is-large" id="start-game-button" data-translate>#GameUI_Start</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Consola: Para mostrar texto de ayuda -->
+	<div class="console" id="console">
+		> ///** SCP Status **///\
+		> SCP-173......... [Contained]\
+		> SCP-096......... [Contained]\
+		> SCP-035......... [Contained]\
+		> SCP-049......... [Contained]\
+		> SCP-106......... [Contained]\
+		> SCP-4579........ [In observation]\
+		> \
+		> ///** Facilities Status **///\
+		> Energy......... [100%]\
+		> Rooms.......... [100%]\
+		> Cameras........ [100%]\
+		> Doors.......... [90%] [ALERT!]\
+		> Emancipator.... [100%]\
+		> Core........... [70%] [DANGER!]\
+		>\
+	</div>
+
+	<!-- Panel para cambiar las opciones del juego -->
+	<div class="window-modal" id="options">
+		<div class="card">
+			<header class="card-header">
+			    <p class="card-header-title">
+			      Opciones
+			    </p>
+			    <a href="#" data-close-window="#options" class="card-header-icon">
+			      <span class="icon">
+			        <i class="fa fa-times-circle"></i>
+			      </span>
+			    </a>
+			</header>
+			<div class="card-content">
+				<div class="content">
+					<details>
+						<summary>Video</summary>
+					</details>
+
+					<details>
+						<summary>Audio</summary>
+
+						<div class="content">
+							<div class="columns">
+								<div class="column is-4">
+									<div class="field">
+										<label data-translate>#GameUI_SoundEffectVolume</label>
+										<p class="control">
+											<input type="range" id="volume" min="0" max="1" step="0.05" data-command="volume" />
+										</p>
+									</div>
+								</div>
+
+								<div class="column is-4">
+									<div class="field">
+										<label data-translate>#GameUI_MusicVolume</label>
+										<p class="control">
+											<input type="range" id="music-volume" min="0" max="1" step="0.05" data-command="Snd_MusicVolume" />
+										</p>
+									</div>
+								</div>
+
+								<div class="column is-4">
+									<div class="field">
+										<label data-translate>#GameUI_SpeakerConfiguration</label>
+										<p class="control">
+											<select data-command="snd_surround_speakers">
+												<option value="2">#GameUI_2Speakers</option>
+												<option value="4">#GameUI_4Speakers</option>
+												<option value="5">#GameUI_5Speakers</option>
+												<option value="0">#GameUI_Headphones</option>
+											</select>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</details>
+
+					<details>
+						<summary>Teclado/ratón</summary>
+					</details>
+
+					<details>
+						<summary>Multijugador</summary>
+					</details>
+
+					<details>
+						<summary>Steam Cloud</summary>
+					</details>
+				</div>
+			</div>
+			<!--
+			<footer class="card-footer">
+		    	<a class="card-footer-item">Save</a>
+		    	<a class="card-footer-item">Edit</a>
+		    	<a class="card-footer-item">Delete</a>
+		  	</footer>
+		  	-->
+		</div>
+	</div>
+</div>

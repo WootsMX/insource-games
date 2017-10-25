@@ -1,0 +1,14 @@
+<div class="loading" v-show="loading.type === 'fullscreen'">
+	<figure class="logo">
+		<img src="assets/images/logo.png" />
+	</figure>
+
+	<div class="details">
+		<h1 class="status-text">{{ loading.statusText }}</h1>
+		<progress class="progress" :value="loading.progress" min="0" max="100">{{ loading.progress }}%</progress>
+	</div>
+
+	<figure class="logo-animated">
+		<img src="assets/images/logo_blur.png" class="animated infinite" />
+	</figure>
+</div>
