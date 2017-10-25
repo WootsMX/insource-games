@@ -1,0 +1,106 @@
+"Rifle_Desert.Fire"
+{
+	"volume" "0.7"
+	"pitch" "95,105"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_100dB"
+	"wave" ")weapons/rifle_desert/gunfire/rifle_fire_1.wav"
+}
+"Rifle_Desert.FireDistant"
+{
+	"volume" "0.6"
+	"pitch" "95,105"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_GUNFIRE"
+	"wave" ")weapons/rifle_desert/gunfire/rifle_fire_1.wav"
+}
+"Rifle_Desert.HelpingHandExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Rifle_Desert.HelpingHandRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Rifle_Desert.ItemPickupExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Rifle_Desert.ItemPickupRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Rifle_Desert.Deploy"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.80,0.77"
+	"wave" ")weapons/rifle_desert/gunother/rifle_deploy_1.wav"
+}
+
+"Rifle_Desert.ClipIn"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/rifle_desert/gunother/rifle_clip_in_1.wav"
+}
+
+"Rifle_Desert.ClipOut"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/rifle_desert/gunother/rifle_clip_out_1.wav"
+}
+
+"Rifle_Desert.ClipLocked"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/rifle_desert/gunother/rifle_clip_locked_1.wav"
+}
+
+"Rifle_Desert.SlideBack"
+{
+	"channel" "CHAN_STATIC"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/rifle_desert/gunother/rifle_slideback_1.wav"
+}
+
+"Rifle_Desert.SlideForward"
+{
+	"channel" "CHAN_STATIC"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/rifle_desert/gunother/rifle_slideforward_1.wav"
+}
+
+"Rifle_Desert.PushButton"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"pitch" "90,110"
+	"wave" ")weapons/rifle_desert/gunother/rifle_ready_1.wav"
+}
+
+"Rifle_Desert.FullAutoButton"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/rifle_desert/gunother/rifle_fullautobutton_1.wav"
+}

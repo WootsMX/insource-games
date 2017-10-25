@@ -1,0 +1,8 @@
+"KeyValuesTest"
+{
+	"easy"
+	{
+		"memory_duration" "6"
+		"panic_duration" "0.8,1.5"
+	}
+}

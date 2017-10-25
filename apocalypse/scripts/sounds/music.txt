@@ -1,0 +1,152 @@
+"Music.Player.Death"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/undeath/leftfordeath.wav"
+}
+
+"Tag.Player.Death"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "0.5"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/tags/leftfordeath.wav"
+}
+
+"Music.Player.PuddleOfYou"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/terror/puddleofyou.wav"
+}
+
+"Tag.Player.PuddleOfYou"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/tags/puddleofyou.wav"
+}
+
+"Music.Player.SoCold"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/terror/iamsocold.wav"
+}
+
+"Tag.Player.SoCold"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/tags/iamsocold.wav"
+}
+
+"Music.Player.Clinging1"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/terror/clingingtohell1.wav"
+}
+
+"Tag.Player.Clinging1"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/tags/clingingtohellhit1.wav"
+}
+
+"Music.Player.Clinging2"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/terror/clingingtohell2.wav"
+}
+
+"Tag.Player.Clinging2"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/tags/clingingtohellhit2.wav"
+}
+
+"Music.Player.Clinging3"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/terror/clingingtohell3.wav"
+}
+
+"Tag.Player.Clinging3"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/tags/clingingtohellhit3.wav"
+}
+
+"Music.Player.Clinging4"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/terror/clingingtohell4.wav"
+}
+
+"Tag.Player.Clinging4"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "music/director/tags/clingingtohellhit4.wav"
+}
+
+"Music.Assault"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "#music/06_Full_Force_Forward.mp3"
+}
+
+"Music.Assault02"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "#music/hl2/VLVX_song22.wav"
+}
+
+"Music.Assault03"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "#music/hl2/VLVX_song22.wav"
+}

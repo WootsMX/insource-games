@@ -1,0 +1,43 @@
+printl( "Initializing Director's script" );
+
+// Tipos de hijo
+CHILD_TYPE_COMMON <- 0
+CHILD_TYPE_AMBIENT <- 1
+CHILD_TYPE_BOSS <- 2
+LAST_CHILD_TYPE <- 3
+
+// Estados del Director
+STATUS_INVALID <- 0
+STATUS_NORMAL <- 1
+STATUS_PANIC <- 2
+STATUS_FINALE <- 3
+STATUS_BOSS <- 4
+STATUS_GAMEOVER <- 5
+LAST_DIRECTOR_STATUS <- 6
+
+// Fases del Director
+PHASE_INVALID <- 0
+PHASE_RELAX <- 1
+PHASE_BUILD_UP <- 2
+PHASE_STRESS_FADE <- 3
+PHASE_POPULATION_FADE <- 4
+PHASE_EVENT <- 5
+LAST_DIRECTOR_PHASE <- 6
+
+// Enojo del Director
+ANGRY_INVALID <- 0
+ANGRY_LOW <- 1
+ANGRY_MEDIUM <- 2
+ANGRY_HIGH <- 3
+ANGRY_CRAZY <- 4
+LAST_DIRECTOR_ANGRY <- 5
+
+DirectorConfig <-
+{
+
+}
+
+function IsAngry()
+{
+	return ( self.GetAngry() >= ANGRY_HIGH );
+}

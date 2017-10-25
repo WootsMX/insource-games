@@ -1,0 +1,88 @@
+"WeaponData"
+{
+	"PrintName" "#Weapon_Shotgun"
+	"ViewModel" "models/weapons/c_shotgun.mdl"
+	"PlayerModel" "models/weapons/w_shotgun.mdl"
+	"Damage" "30"
+	"Bullets" "2"
+	"FireRate" "1.5"
+	"VerticalPunch"	"4"
+	"SpreadPerShot" "0.03490"
+	"CrouchSpread" "0.7"
+	"BotSpread" "1"
+	"JumpSpread" "1.3"
+	"DejectedSpread" "1.3"
+	"MovingSpread" "1.1"
+	"AddonAttachment" ""
+	"FOV" "90"
+	"Distance" "8000"
+	"IdealDistance" "5000"
+	"PenetrationNumLayers" "5"
+	"PenetrationMaxDistance" "35"
+	"Bucket" "2"
+	"BucketPosition" "0"
+	"ClipSize" "8"
+	"Clip2Size" "0"
+	"DefaultClip" "8"
+	"DefaultClip2" "0"
+	"PrimaryAmmo" "AMMO_TYPE_SHOTGUN"
+	"SecondaryAmmo" "None"
+	"BuiltRightHanded" "1"
+	"AllowFlipping" "0"
+	"MeleeWeapon" "0"
+	"Weight" "4"
+	"ItemFlags" "0"
+	"Rumble" "5"
+	"SoundData"
+	{
+		"single_shot" "Weapon_Shotgun.Shot"
+		"empty" "Shotgun.Empty"
+	}
+	"TextureData"
+	{
+		"weapon"
+		{
+			"font" "WeaponIcons"
+			"character" "a"
+		}
+		"weapon_s"
+		{
+			"font" "WeaponIconsSelected"
+			"character" "a"
+		}
+		"ammo"
+		{
+			"font" "WeaponIcons"
+			"character" "r"
+		}
+		"crosshair"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+		"autoaim"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+	}
+	"ModelBounds"
+	{
+		"Viewmodel"
+		{
+			"Mins" "-10 -4 -13"
+			"Maxs" "21 9 -1"
+		}
+		"World"
+		{
+			"Mins" "-10 -7 -6"
+			"Maxs" "22 8 9"
+		}
+	}
+}

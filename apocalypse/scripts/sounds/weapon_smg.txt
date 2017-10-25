@@ -1,0 +1,99 @@
+"SMG.Fire"
+{
+	"volume" "0.8"
+	"pitch" "90,110"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_GUNFIRE"
+	"wave" "weapons/smg/gunfire/mac10-1.wav"
+}
+
+"SMG.OtherFire"
+{
+	"volume" "0.6"
+	"pitch" "90,110"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_GUNFIRE"
+	"wave" "^weapons/SMG/gunfire/mac10-2.wav"
+}
+
+"SMG.HelpingHandExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.50"
+	"wave" ")weapons/pistol/gunother/pistol_helpinghandextend.wav"
+}
+
+"SMG.HelpingHandRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.20"
+	"wave" ")weapons/pistol/gunother/pistol_helpinghandretract.wav"
+}
+
+"SMG.ItemPickupExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.50"
+	"wave" ")weapons/pistol/gunother/pistol_helpinghandextend.wav"
+}
+
+"SMG.ItemPickupRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.20"
+	"wave" ")weapons/pistol/gunother/pistol_helpinghandretract.wav"
+}
+
+"SMG.Deploy"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.80,0.77"
+	"wave" ")weapons/smg/gunother/mac10_draw.wav"
+}
+
+"SMG.ClipIn"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" "weapons/SMG/gunother/smg_clip_in_1.wav"
+}
+
+"SMG.ClipOut"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" "weapons/SMG/gunother/smg_clip_out_1.wav"
+}
+
+"SMG.ClipLocked"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" "weapons/SMG/gunother/smg_clip_locked_1.wav"
+}
+
+"SMG.SlideBack"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" "weapons/SMG/gunother/smg_slideback_1.wav"
+}
+
+"SMG.SlideForward"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" "weapons/SMG/gunother/smg_slideforward_1.wav"
+}
+
+"SMG.FullAutoButton"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" "weapons/SMG/gunother/smg_fullautobutton_1.wav"
+}

@@ -1,0 +1,177 @@
+"Default.ClipEmpty_Rifle"
+{
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" "weapons/clipempty_rifle.wav"
+}
+"Default.ClipEmpty_Pistol"
+{
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" "weapons/clipempty_pistol.wav"
+}
+"Default.Zoom"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.75"
+	"pitch" "96,104"
+	"wave" ")weapons/hunting_rifle/gunother/hunting_rifle_zoom.wav"
+}
+"BaseGrenade.Explode"
+{
+	"channel" "CHAN_WEAPON"
+	"volume" "1"
+	"soundlevel" "SNDLVL_100dB"
+	"pitch" "80,120"
+	"rndwave"
+	{
+		"wave" "^weapons/hegrenade/explode3.wav"
+		"wave" "^weapons/hegrenade/explode4.wav"
+		"wave" "^weapons/hegrenade/explode5.wav"
+	}
+}
+"BaseExplosionEffect.Sound"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_85dB"
+	"pitch" "80,110"
+	"rndwave"
+	{
+		"wave" "weapons/debris1.wav"
+		"wave" "weapons/debris2.wav"
+	}
+}
+"WaterExplosionEffect.Sound"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_140dB"
+	"pitch" "80,130"
+	"rndwave"
+	{
+		"wave" "^weapons/underwater_explode3.wav"
+		"wave" "^weapons/underwater_explode4.wav"
+	}
+}
+"BaseGrenade.StopSounds"
+{
+	"channel" "CHAN_WEAPON"
+	"volume" "0.7"
+	"soundlevel" "SNDLVL_75dB"
+	"wave" "common/null.wav"
+}
+"BaseGrenade.BounceSound"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "0.7"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" "weapons/slam/bounce1.wav"
+}
+"Bullets.DefaultNearmiss"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_80dB"
+	"pitch" "90,120"
+	"rndwave"
+	{
+		"wave" ">weapons/fx/nearmiss/bulletltor07.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor08.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor09.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor10.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor11.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor13.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor14.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor01.wav"
+		"wave" ">weapons/fx/nearmiss/bulletltor06.wav"
+	}
+}
+"FX_RicochetSound.Ricochet"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "0.5, 0.6"
+	"soundlevel" "SNDLVL_80dB"
+	"pitch" "90, 110"
+	"rndwave"
+	{
+		"wave" "weapons/fx/rics/ric1.wav"
+		"wave" "weapons/fx/rics/ric2.wav"
+		"wave" "weapons/fx/rics/ric3.wav"
+		"wave" "weapons/fx/rics/ric4.wav"
+		"wave" "weapons/fx/rics/ric5.wav"
+	}
+}
+
+
+"HuntingRifle.Deploy"
+{
+	"volume" "0.80,0.77"
+	"wave" ")weapons/hunting_rifle/gunother/hunting_rifle_deploy_1.wav"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_NORM"
+}
+"HuntingRifle.ClipOut"
+{
+	"volume" "0.5"
+	"wave" "weapons/hunting_rifle/gunother/hunting_rifle_clipout.wav"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+}
+"HuntingRifle.ClipIn"
+{
+	"volume" "0.5"
+	"wave" "weapons/hunting_rifle/gunother/hunting_rifle_clipin.wav"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+}
+"HuntingRifle.ClipLocked"
+{
+	"volume" "0.5"
+	"wave" "weapons/hunting_rifle/gunother/hunting_rifle_cliplocked.wav"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+}
+"HuntingRifle.Boltback"
+{
+	"volume" "0.5"
+	"wave" "weapons/hunting_rifle/gunother/hunting_rifle_boltback.wav"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+}
+"HuntingRifle.BoltForward"
+{
+	"volume" "0.5"
+	"wave" "weapons/hunting_rifle/gunother/hunting_rifle_boltforward.wav"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+}
+"HuntingRifle.PushButton"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" "weapons/hunting_rifle/gunother/hunting_rifle_push_button_1.wav"
+}
+"HuntingRifle.Zoom"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.75"
+	"wave" "weapons/hunting_rifle/gunother/hunting_rifle_zoom.wav"
+}
+"HuntingRifle.ItemPickupExtend"
+{
+	"volume" "0.4"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}
+"HuntingRifle.ItemPickupRetract"
+{
+	"volume" "0.4"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}

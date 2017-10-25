@@ -1,0 +1,54 @@
+"Player.DenyWeaponSelection"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.32"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "common/wpn_denyselect.wav"
+}
+"Player.WeaponSelected"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.32"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "common/wpn_select.wav"
+}
+"Player.WeaponSelectionMoveSlot"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.32"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "common/wpn_moveselect.wav"
+}
+"Player.WeaponSelectionOpen"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.32"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "common/wpn_hudon.wav"
+}
+"Player.WeaponSelectionClose"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.32"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "common/wpn_hudoff.wav"
+}
+"Misc.MainUI"
+{
+	"channel" "CHAN_AUTO"
+	"volume" "0.4"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"rndwave"
+	{
+		"wave" "music/HL2_song27_trainstation2.mp3"
+		"wave" "music/vlvx_song1.mp3"
+		"wave" "music/vlvx_song2.mp3"
+		"wave" "music/HL2_song17.mp3"
+	}
+}

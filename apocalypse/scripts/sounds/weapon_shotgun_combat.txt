@@ -1,0 +1,55 @@
+"AutoShotgun.Fire"
+{
+	"volume" "0.8"
+	"pitch" "90,110"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_GUNFIRE"
+	"wave" "weapons/shotgun/gunfire/shotgun_fire_1.wav"
+}
+
+"AutoShotgun.OtherFire"
+{
+	"volume" "0.6"
+	"pitch" "90,110"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_GUNFIRE"
+	"wave" "^weapons/shotgun/gunfire/shotgun_fire_2.wav"
+}
+
+"AutoShotgun.Deploy"
+{
+	"volume" "0.7,0.8"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+	"wave" "weapons/shotgun/gunother/shotgun_deploy_1.wav"
+}
+
+"AutoShotgun.LoadShell"
+{
+	"volume" "0.5"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "90,100"
+	"rndwave"
+	{
+		"wave" "weapons/shotgun/gunother/shotgun_load_shell_4.wav"
+		"wave" "weapons/shotgun/gunother/shotgun_load_shell_2.wav"
+	}
+}
+
+"AutoShotgun.ItemPickupExtend"
+{
+	"volume" "0.4"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}
+
+"AutoShotgun.ItemPickupRetract"
+{
+	"volume" "0.4"
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}

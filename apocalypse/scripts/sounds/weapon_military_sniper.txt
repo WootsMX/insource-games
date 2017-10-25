@@ -1,0 +1,104 @@
+"Sniper_Military.Fire"
+{
+	"volume" "0.85"
+	"pitch" "95,105"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_100dB"
+	"rndwave"
+	{
+		"wave" ")weapons/sniper_military/gunfire/sniper_military_fire-01.wav"
+		"wave" ")weapons/sniper_military/gunfire/sniper_military_fire-02.wav"
+		"wave" ")weapons/sniper_military/gunfire/sniper_military_fire-03.wav"
+		"wave" ")weapons/sniper_military/gunfire/sniper_military_fire-04.wav"
+	}
+}
+"Sniper_Military.HelpingHandExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Sniper_Military.HelpingHandRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Sniper__Military.ItemPickupExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Sniper_Military.ItemPickupRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Sniper_Military.Deploy"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.80,0.77"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_deploy_1.wav"
+}
+
+"Sniper_Military.ClipIn"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_clip_in_1.wav"
+}
+
+"Sniper_Military.ClipOut"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_clip_out_1.wav"
+}
+
+"Sniper_Military.ClipLocked"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_clip_locked_1.wav"
+}
+
+"Sniper_Military.Boltback"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_slideback_1.wav"
+}
+
+"Sniper_Military.BoltForward"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_slideforward_1.wav"
+}
+
+"Sniper_Military.PushButton"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_push_button_1.wav"
+}
+
+"Sniper_Military.Zoom"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.75"
+	"wave" "weapons/sniper_military/gunother/sniper_military_zoom.wav"
+}

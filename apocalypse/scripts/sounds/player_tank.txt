@@ -1,0 +1,117 @@
+"Tank.Idle"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "0.4,0.8"
+	"soundlevel" "SNDLVL_IDLE"
+	"rndwave"
+	{
+		"wave" "player/tank/voice/idle/tank_breathe_01.wav"
+		"wave" "player/tank/voice/idle/tank_breathe_02.wav"
+		"wave" "player/tank/voice/idle/tank_breathe_03.wav"
+		"wave" "player/tank/voice/idle/tank_breathe_04.wav"
+		"wave" "player/tank/voice/idle/tank_breathe_05.wav"
+		"wave" "player/tank/voice/idle/tank_breathe_06.wav"
+		"wave" "player/tank/voice/idle/tank_breathe_07.wav"
+		"wave" "player/tank/voice/idle/tank_breathe_08.wav"
+	}
+}
+"Tank.Alert"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "0.8,0.9"
+	"soundlevel" "SNDLVL_IDLE"
+	"rndwave"
+	{
+		"wave" "player/tank/voice/idle/tank_growl_01.wav"
+		"wave" "player/tank/voice/idle/tank_growl_02.wav"
+		"wave" "player/tank/voice/idle/tank_growl_03.wav"
+		"wave" "player/tank/voice/idle/tank_growl_09.wav"
+		"wave" "player/tank/voice/idle/tank_growl_10.wav"
+		"wave" "player/tank/voice/idle/tank_growl_11.wav"
+		"wave" "player/tank/voice/idle/tank_growl_12.wav"
+		"wave" "player/tank/voice/idle/tank_voice_01.wav"
+		"wave" "player/tank/voice/idle/tank_voice_02.wav"
+		"wave" "player/tank/voice/idle/tank_voice_03.wav"
+		"wave" "player/tank/voice/idle/tank_voice_04.wav"
+		"wave" "player/tank/voice/idle/tank_voice_05.wav"
+		"wave" "player/tank/voice/idle/tank_voice_06.wav"
+		"wave" "player/tank/voice/idle/tank_voice_07.wav"
+		"wave" "player/tank/voice/idle/tank_voice_08.wav"
+		"wave" "player/tank/voice/idle/tank_voice_09.wav"
+	}
+}
+"Tank.Pain"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "0.9,1.0"
+	"soundlevel" "SNDLVL_90dB"
+	"rndwave"
+	{
+		"wave" "player/tank/voice/pain/tank_pain_01.wav"
+		"wave" "player/tank/voice/pain/tank_pain_02.wav"
+		"wave" "player/tank/voice/pain/tank_pain_03.wav"
+		"wave" "player/tank/voice/pain/tank_pain_04.wav"
+		"wave" "player/tank/voice/pain/tank_pain_05.wav"
+		"wave" "player/tank/voice/pain/tank_pain_06.wav"
+		"wave" "player/tank/voice/pain/tank_pain_07.wav"
+		"wave" "player/tank/voice/pain/tank_pain_08.wav"
+		"wave" "player/tank/voice/pain/tank_pain_09.wav"
+		"wave" "player/tank/voice/pain/tank_pain_10.wav"
+	}
+}
+"Tank.Attack"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "0.9,1.0"
+	"soundlevel" "SNDLVL_100dB"
+	"rndwave"
+	{
+		"wave" "player/tank/voice/attack/tank_attack_01.wav"
+		"wave" "player/tank/voice/attack/tank_attack_02.wav"
+		"wave" "player/tank/voice/attack/tank_attack_03.wav"
+		"wave" "player/tank/voice/attack/tank_attack_04.wav"
+		"wave" "player/tank/voice/attack/tank_attack_05.wav"
+		"wave" "player/tank/voice/attack/tank_attack_06.wav"
+		"wave" "player/tank/voice/attack/tank_attack_07.wav"
+		"wave" "player/tank/voice/attack/tank_attack_08.wav"
+		"wave" "player/tank/voice/attack/tank_attack_09.wav"
+		"wave" "player/tank/voice/attack/tank_attack_10.wav"
+	}
+}
+"Tank.Death"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "0.4,0.8"
+	"soundlevel" "SNDLVL_IDLE"
+	"rndwave"
+	{
+		"wave" "player/tank/voice/die/tank_death_01.wav"
+		"wave" "player/tank/voice/die/tank_death_02.wav"
+		"wave" "player/tank/voice/die/tank_death_03.wav"
+		"wave" "player/tank/voice/die/tank_death_04.wav"
+		"wave" "player/tank/voice/die/tank_death_05.wav"
+		"wave" "player/tank/voice/die/tank_death_06.wav"
+		"wave" "player/tank/voice/die/tank_death_07.wav"
+	}
+}
+"Tank.Hit"
+{
+	"channel" "CHAN_BODY"
+	"volume" "0.5,0.8"
+	"soundlevel" "SNDLVL_NORM"
+	"rndwave"
+	{
+		"wave" "player/tank/hit/pound_victim_1.wav"
+		"wave" "player/tank/hit/pound_victim_2.wav"
+	}
+}
+"Tank.Punch"
+{
+	"channel" "CHAN_BODY"
+	"volume" "0.5,0.8"
+	"soundlevel" "SNDLVL_NORM"
+	"rndwave"
+	{
+		"wave" "player/tank/hit/hulk_punch_1.wav"
+	}
+}

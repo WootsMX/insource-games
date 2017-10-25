@@ -1,0 +1,10 @@
+"Population"
+{
+	"default"
+	{
+		"commons"
+		{
+			"npc_infected"	"100"
+		}
+	}
+}

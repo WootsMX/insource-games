@@ -1,0 +1,120 @@
+"Rifle.Fire"
+{
+	"volume" "0.8"
+	"pitch" "90,110"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_GUNFIRE"
+	"rndwave"
+	{
+		"wave" "weapons/rifle/gunfire/m4a1_us_01.wav"
+		"wave" "weapons/rifle/gunfire/m4a1_us_02.wav"
+		"wave" "weapons/rifle/gunfire/m4a1_us_03.wav"
+		"wave" "weapons/rifle/gunfire/m4a1_us_04.wav"
+	}
+}
+
+"Rifle.OtherFire"
+{
+	"volume" "0.6"
+	"pitch" "80,120"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_GUNFIRE"
+	"rndwave"
+	{
+		"wave" "^weapons/rifle/gunfire/m4a1_us02_01.wav"
+		"wave" "^weapons/rifle/gunfire/m4a1_us02_02.wav"
+		"wave" "^weapons/rifle/gunfire/m4a1_us02_03.wav"
+	}
+}
+
+"Rifle.HelpingHandExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Rifle.HelpingHandRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Rifle.ItemPickupExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Rifle.ItemPickupRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Rifle.Deploy"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.80,0.77"
+	"wave" ")weapons/rifle/gunother/rifle_deploy_1.wav"
+}
+
+"Rifle.ClipIn"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" ")weapons/rifle/gunother/m4a1_clipin.wav"
+}
+
+"Rifle.ClipOut"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" ")weapons/rifle/gunother/m4a1_clipout.wav"
+}
+
+"Rifle.ClipLocked"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" ")weapons/rifle/gunother/m4a1_cliphit.wav"
+}
+
+"Rifle.SlideBack"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" ")weapons/rifle/gunother/m4a1_boltback.wav"
+}
+
+"Rifle.SlideForward"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.60"
+	"wave" ")weapons/rifle/gunother/m4a1_boltforward.wav"
+}
+
+"Rifle.PushButton"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"volume" "0.50"
+	"pitch" "90,110"
+	"wave" ")weapons/rifle/gunother/rifle_ready_1.wav"
+}
+
+"Rifle.FullAutoButton"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_IDLE"
+	"wave" ")weapons/rifle/gunother/rifle_fullautobutton_1.wav"
+}

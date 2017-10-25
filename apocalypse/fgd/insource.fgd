@@ -1,0 +1,395 @@
+@include "hl2.fgd"
+@include "deferred.fgd"
+
+//
+// Iluminación
+//
+@PointClass base(Targetname) = env_daynight_cycle : ""
+[
+]
+
+//
+// Weapons
+//
+@PointClass base(Targetname, Angles, EnableDisable) studio("models/w_models/weapons/w_rifle_ak47.mdl") = info_weapon_spawn : "Spawn a Weapon"
+[
+	spawnflags(Flags) = 
+	[
+		1 : "Spawn Immediately" : 0
+		2 : "Don't Spawn While Visible" : 1
+		4 : "Only one active" : 1
+		8 : "Static Spawner" : 0
+		16 : "Adaptative to Skill" : 0
+	]
+
+	Tier(integer) : "Weapon Tier" : 2 : ""
+	Amount(integer) : "Amount" : 0 : ""
+
+	OnlySkill(choices) : "Only in Skill" : "0" = 
+	[
+		"0" : "Any"
+		"1" : "Easy"
+		"2" : "Medium"
+		"3" : "Hard"
+	]
+
+	// Outputs
+	output OnSpawn(void) : "Fired when the Bot is spawned." 
+	output OnDepleted(void) : "Fired when the Bot is dead."
+
+	// Inputs
+	input Spawn(void) : "Spawns the Bot"
+	input Toggle(void) : "Toggles the spawner enabled/disabled state."
+	input Enable(void) : "Enables the spawner."
+	input Disable(void) : "Disables the spawner."
+
+	input SetTier(integer) : ""
+	input SetAmount(integer) : ""
+	input Fill(void) : "Disables the spawner."
+]
+
+//
+// Bots
+//
+@PointClass base(Targetname, Angles, EnableDisable) studio("models/sligwolf/rustyrobot/rustyer.mdl") = info_bot_spawn : "Spawn a Bot"
+[
+	spawnflags(Flags) = 
+	[
+		1 : "Spawn Immediately" : 0
+		2 : "Don't Spawn While Visible" : 1
+		4 : "Simulate Kill (Kick on Death)" : 1
+		8 : "Only one active" : 1
+		16 : "Use spawner position" : 1
+		32 : "Peaceful: Don't acquire enemies" : 0
+		64 : "Don't drop weapons" : 0
+	]
+
+	BotTargetname(string) : "Bot Name" : "" : "Name to refer to other entities."
+	Playername(string) : "Player Name" : "" : "Player name for the Bot. If left empty will be used one at random in the code."
+	BotSquad(string) : "Squad" : "" : "Name of the Bot Squad"
+
+	IsLeader(choices) : "Squad Leader" : "0" =
+	[
+		"0" : "Auto"
+		"1" : "Yes"
+	]
+
+	PlayerTeam(choices) : "Team" : "0" =
+	[
+		"0" : "Generic"
+		"2" : "Survivors"
+		"3" : "Soldiers"
+		"4" : "Infected / SCP"
+	]
+
+	PlayerClass(choices) : "Class" : "0" =
+	[
+		"0" : "None"
+		"1" : "Commander / Director Assistant"
+		"2" : "Infected (Common) / SCP-173"
+		"3" : "Infected (Boss) / SCP-096"
+		"4" : "Soldier Level 1 / SCP-035"
+		"5" : "Soldier Level 2 / SCP-049"
+		"6" : "Soldier Level 3 / SCP-106"
+		"7" : "Soldier Medic / SCP-4579"
+	]
+
+	BotSkill(choices) : "Skill" : "0" =
+	[
+		"0" : "Random"
+		"1" : "Easy"
+		"2" : "Medium"
+		"3" : "Hard"
+		"4" : "Very Hard"
+		"5" : "Ultra Hard"
+		"6" : "Realism/Imposible"
+		"99" : "Game Skill"
+	]
+
+	BotTacticalMode(choices) : "Tactical Mode" : "1" =
+	[
+		"1" : "None"
+		"2" : "Stealth"
+		"3" : "Assault"
+		"4" : "Defensive"
+		"5" : "Aggressive"
+	]
+
+	AdditionalEquipment(choices) : "Weapon" : "" =
+	[
+		"random" : "Random"
+		"weapon_rifle_ak47" : "Rifle AK47"
+		"weapon_rifle_m16" : "Rifle M16"
+		"weapon_smg" : "SMG"
+		"weapon_pistol_p220" : "Pistol P220"
+		"weapon_shotgun_combat" : "Combat Shotgun"
+		"weapon_rifle_sniper" : "Sniper Rifle"
+		"" : "Nothing"
+	]
+
+	DisableMovement(choices) : "Disable Movement" : "0" =
+	[
+		"0" : "No"
+		"1" : "Yes"
+	]
+
+	Performance(choices) : "Performance" : 2 : "" =
+	[
+		0 : "Awake"
+		1 : "Visibility"
+		2 : "PVS"
+		3 : "PVS, then visibility"
+	]
+
+	BlockLookAround(integer) : "Block 'Looking Around'" : 0 : "Duration in seconds that the Bot will not be able to look at its surroundings. (interesting places, danger sounds, random, etc) - 0 = Disabled"
+	FollowEntity(string) : "Spawn Following Entity" : "" : "Name of the entity that the Bot should start to follow when it spawn."
+
+	// Outputs
+	output OnSpawn(string) : "Fired when the Bot is spawned." 
+	output OnBotDead(void) : "Fired when the Bot is dead."
+
+	// Inputs
+	input Spawn(void) : "Spawns the Bot"
+	input Respawn(void) : "Respawn the created Bot"
+	input Follow(string) : "Make the Bot follow the Entity"
+	input Toggle(void) : "Toggles the spawner enabled/disabled state."
+	input Enable(void) : "Enables the spawner."
+	input Disable(void) : "Disables the spawner."
+
+	input SetSkill(integer) : ""
+	input SetTacticalMode(integer) : ""
+	input BlockLook(integer) : ""
+	input SetSquad(string) : ""
+	input DisableMovement(void) : ""
+	input EnableMovement(void) : ""
+	input StartPeaceful(void) : ""
+	input StopPeaceful(void) : ""
+	input DriveTo(target_destination) : ""
+]
+
+@PointClass base(Targetname) iconsprite("editor/ai_goal_lead") = bot_squad : "Create a Squad with Rules"
+[
+	spawnflags(Flags) = 
+	[
+		1 : "TODO" : 0
+	]
+
+	SquadName(string) : "Squad Name" : "" : "Name of the Squad"
+	SquadLimit(integer) : "Member Limit" : 0 : "Limit of Bots who can join to the squad. 0 = Infinite."
+
+	FollowLeader(choices) : "Follow Leader" : "1" =
+	[
+		"0" : "No"
+		"1" : "Yes"
+	]
+
+	SquadStrategie(choices) : "Strategie" : "0" =
+	[
+		"0" : "Endure until Death"
+		"1" : "Cowards"
+		"2" : "The last call for backup"
+	]
+
+	SquadTacticalMode(choices) : "Tactical Mode" : "99" =
+	[
+		"1" : "None"
+		"2" : "Stealth"
+		"3" : "Assault"
+		"4" : "Defensive"
+		"5" : "Aggressive"
+		"99" : "Dont override"
+	]
+
+	SquadSkill(choices) : "Skill" : "99" =
+	[
+		"0" : "Random"
+		"1" : "Easy"
+		"2" : "Medium"
+		"3" : "Hard"
+		"4" : "Very Hard"
+		"5" : "Ultra Hard"
+		"6" : "Realism/Imposible"
+		"99" : "Dont override"
+	]
+
+	// Outputs
+	output OnMemberDead(void) : "Fired when a member is dead."
+	output OnReportEnemy(void) : "Fired when a member report a enemy."
+	output OnReportPlayerEnemy(void) : "Fired when a member report a human player enemy."
+	output OnReportHumanEnemy(void) : "Fired when a member report a human player enemy."
+	output OnReportDamage(void) : "Fired when a member report take damage."
+	output OnNewLeader(void) : "Fired when a member becomes a leader."
+
+	// Inputs
+	input Destroy(void) : "Destroy the Squad"
+]
+
+//
+// Logic
+//
+
+@PointClass base(Targetname) size(-8 -8 -8, 8 8 8) = point_broadcastclientcommand : 
+	"An entity that issues commands to each valid client's console, as if it was typed in by that player locally."
+[
+	// Inputs
+	input Command(string) : "Command to execute."
+]
+
+@PointClass base(Targetname, EnableDisable) iconsprite("editor/director.vmt") = info_director : "The Director"
+[
+	Population(string) : "Population" : "default" : ""
+
+	// Outputs
+	output OnSpawn(string) : "Fired when the Bot is spawned." 
+	output OnBotDead(void) : "Fired when the Bot is dead."
+
+	// Inputs
+	input Stop(void) : "Spawns the Bot"
+	input Resume(void) : "Respawn the created Bot"
+
+	input SetNormal(void) : ""
+	input StartPanic(integer) : ""
+	input StartInfinitePanic(void) : ""
+	input StartFinale(void) : ""
+	input SetPopulation(string) : ""
+	input KillMinions(void) : ""
+]
+
+//
+// Enviroment
+//
+
+@PointClass base(Targetname) iconsprite("editor/ambient_generic.vmt") = env_sound : "Create and controls a Sound"
+[
+	spawnflags(Flags) = 
+	[
+		1 : "Start Playing" : 0
+		2 : "Is Looped" : 0
+		4 : "Server Side" : 0
+	]
+
+	SoundName(sound) report : "Sound Name" : "" : "Name of the GameSound entry for the sound to play."
+
+	StartVolume(float) : "Start Volume" : "0.0" : "Volume to start playing the sound. 0 = Don't use."
+	FadeVolume(float) : "Fade Volume Time" : "0.0" : "Time in seconds to fade in/out from Start Volume to Volume. Also used for any change in volume."
+
+	StartPitch(integer) : "Start Pitch" : 0 : "Pitch to start playing the sound. 0 = Don't use."
+	FadePitch(float) : "Fade Pitch Time" : "0.0" : "Time in seconds to fade in/out from Start Pitch to Pitch. Also used for any change in pitch."
+
+	Volume(float) : "Volume" : "0.0" : "Sound Volume. 1.0 = Max. 0 = Use soundscript value."
+	Pitch(integer) : "Pitch" : 0 : "Sound Pitch. 0 = Use soundscript value."
+
+	OriginEntity(target_destination) : "Origin Entity" : : "If an entity is specified, sound will come from this named entity instead of the location of env_sound."
+
+	Team(choices) : "Exclusive to Team" : "-1" =
+	[
+		"-1" : "Any"
+		"1" : "Spectators"
+		"0" : "Generic"
+		"2" : "Humans/Survivors"
+		"3" : "Soldiers"
+		"4" : "Infected"
+		"4" : "SCP's"
+	]
+
+	Channel(choices) : "Channel" : "-1" : "Sound channel. It allows to define in which group / channel the sound is found. Only the highest 'desire' sound of each channel will be played automatically. Use the GetSoundDesire function of vscript to return the wish. Establishing a channel assumes that the Inputs Play and Stop will be useless." =
+	[
+		"-1" : "Don't use channel system"
+		"0" : "CHANNEL_ANY"
+		"1" : "CHANNEL_1"
+		"2" : "CHANNEL_2"
+		"3" : "CHANNEL_3"
+		"4" : "CHANNEL_4"
+		"5" : "CHANNEL_5"
+		"6" : "CHANNEL_6"
+		"7" : "CHANNEL_7"
+		"8" : "CHANNEL_8"
+	]
+
+	// Outputs
+	output OnSpawn(string) : "Fired when the Bot is spawned." 
+	output OnBotDead(void) : "Fired when the Bot is dead."
+
+	// Inputs
+	input Play(void) : "Plays the sound."
+	input Stop(void) : "Stops the sound."
+	input Fadeout(float) : "Slowly turn the volume down to stop sound playback."
+	input SetVolume(float) : "Sets the volume of the sound."
+	input RestoreVolume(void) : "Restore the volume of the sound."
+	input SetPitch(integer) : "Sets the pitch of the sound."
+	input RestorePitch(void) : "Restore the pitch of the sound."
+	input SetSoundName(string) : "Sets the soundscript name of the sound to be played."
+	input SetTeam(integer) : "Sets the team that can hear the sound."
+	input SetOrigin(string) : "Sets the name of the entity source of the sound."
+	input SetChannel(integer) : "Sets the channel of the sound."
+]
+
+@PointClass base(Origin, Targetname, Parentname, EnableDisable) sphere(Radius) iconsprite("editor/info_target.vmt") = env_attribute : "Create a radius attribute modifier"
+[
+	spawnflags(Flags) = 
+	[
+		1 : "TODO?" : 0
+	]
+
+	ModifierName(string) : "Attribute Modifier Name" : "" : "Name of the modifier to apply."
+	Radius(float) : "Radius" : "100.0" : ""
+
+	Team(choices) : "Exclusive to Team" : "-1" =
+	[
+		"-1" : "Any"
+		"1" : "Spectators"
+		"0" : "Generic"
+		"2" : "Humans/Survivors"
+		"3" : "Soldiers"
+		"4" : "Infected"
+		"4" : "SCP's"
+	]
+
+	// Outputs
+	
+
+	// Inputs
+	
+]
+
+//
+// Brushes
+//
+@SolidClass base(func_brush) = func_reflective_glass :
+	"Used to produce perfectly reflective glass that renders world + entities. " +
+	"Typically, you want your glass brush to have nodraw on all non-reflective surfaces " +
+	"and you want to use a shader like lightmappedreflective in your material applied " +
+	"to the non-nodraw surfaces. See hl2/materials/glass/reflectiveglass001.vmt for an example. "
+[
+	ReflectionID(integer) : "Reflection ID" : 0 : "To support multiple reflections within the player PVS it is necessary to declare each of them with a different ID that must match with the texture used, specifically with the parameter: $reflecttexture"	
+]
+
+// Nav Mesh
+@BaseClass = NavBlocker
+[
+	input BlockNav(void) : "Starts blocking nav areas."
+	input UnblockNav(void) : "Stops blocking nav areas."
+
+	teamToBlock(choices) : "Team(s) to block" : -1 : "Team(s) this entity should block" =
+	[
+		-1 : "Everyone"
+		2 : "Survivors"
+		3 : "Infected"
+	]
+
+	StartDisabled(boolean) : "Start Disabled" : 0 : ""
+]
+
+@SolidClass base(Targetname, NavBlocker) = func_nav_blocker : "A brush entity that can block nav areas touching its AABB." 
+[
+]
+
+@PointClass obb(boxmins, boxmaxs) base(Targetname, Angles, NavBlocker) = point_nav_blocker : "A point entity that can block nav areas touching its AABB."
+[
+	boxmins(vector) : "Mins" : "-8 -8 -8"
+	boxmaxs(vector) : "Maxs" : "8 8 8"
+]
+
+@SolidClass base(Targetname, EnableDisable) = func_nav_avoidance_obstacle : "A brush entity that tells bots to avoid nav areas touching its AABB." 
+[
+]

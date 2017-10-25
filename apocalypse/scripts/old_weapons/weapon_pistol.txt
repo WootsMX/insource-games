@@ -1,0 +1,97 @@
+"WeaponData"
+{
+	"PrintName" "#Weapon_Pistol"
+	"ViewModel" "models/weapons/c_pistol.mdl"
+	"PlayerModel" "models/weapons/w_pistol.mdl"
+	"Damage" "17"
+	"Bullets" "1"
+	"FireRate" "5"
+	"VerticalPunch"	"0.5"
+	"SpreadPerShot" "0.00873"
+	"CrouchSpread" "0.5"
+	"BotSpread" "1"
+	"JumpSpread" "1.1"
+	"DejectedSpread" "1.3"
+	"MovingSpread" "1.1"
+	"AddonAttachment" ""
+	"FOV" "90"
+	"Distance" "5500"
+	"IdealDistance" "5500"
+	"MuzzleFlashEffect_1stPerson" "weapon_muzzle_flash_pistol_FP"
+	"MuzzleFlashEffect_3rdPerson" "weapon_muzzle_flash_pistol"
+	"EjectBrassEffect" "weapon_shell_casing_9mm"
+	"PenetrationNumLayers" "1"
+	"PenetrationMaxDistance" "10"
+	"Bucket" "1"
+	"BucketPosition" "0"
+	"ClipSize" "17"
+	"Clip2Size" "0"
+	"DefaultClip" "17"
+	"DefaultClip2" "0"
+	"PrimaryAmmo" "AMMO_TYPE_PISTOL"
+	"SecondaryAmmo" "None"
+	"BuiltRightHanded" "1"
+	"AllowFlipping" "0"
+	"MeleeWeapon" "0"
+	"Weight" "1"
+	"ItemFlags" "0"
+	"Rumble" "1"
+	"SoundData"
+	{
+		"single_shot" "Weapon_Pistol.Fire"
+		"empty" "Default.ClipEmpty_Pistol"
+	}
+	"TextureData"
+	{
+		"weapon"
+		{
+			"file"		"vgui/hud/iconsheet"
+			"x"			"256"
+			"y"			"320"
+			"width"		"64"
+			"height"	"64"
+		}
+		"weapon_s"
+		{
+			"file"		"vgui/hud/iconsheet"
+			"x"			"256"
+			"y"			"320"
+			"width"		"64"
+			"height"	"64"
+		}
+		"ammo"
+		{
+			"font"		"DebugFixed"
+			"character"	"A"
+		}
+		"crosshair"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+		"autoaim"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+	}
+	"ModelBounds"
+	{
+		"Viewmodel"
+		{
+			Mins	"-7 -4 -14"
+			Maxs	"24 9 -2"
+		}
+		"World"
+		{
+			Mins	"-1 -4 -3"
+			Maxs	"17 5 6"
+		}
+	}
+}

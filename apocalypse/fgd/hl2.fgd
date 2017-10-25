@@ -1,0 +1,329 @@
+@include "swarmbase.fgd"
+
+@PointClass base(Targetname, Angles) color(255 0 0) = env_sun : "An entity to control & draw a sun effect in the sky."
+[
+	rendercolor(color255) : "Sun Color (R G B)" : "100 80 80"
+	overlaycolor(color255) : "Overlay Color (R G B)" : "0 0 0" : "A value of 0 0 0 will act the old way."
+	
+	size(integer) : "Size" : 24
+	overlaysize(integer) : "Overlay Size" : -1 : "A value of -1 means the overlay will act the old way."
+	
+	material(sprite) : "Material Name" : "sprites/light_glow02_add_noz" : "Material of the inner glow."
+	overlaymaterial(sprite) : "Overlay Material Name" : "sprites/light_glow02_add_noz" : "Material of the overlay glow."
+
+	HDRColorScale(float) : "HDR color scale." : "1.0" : "float value to multiply sprite color by when running in HDR mode."
+
+	// Inputs
+	input TurnOn(void) : "Enable sun rendering."
+	input TurnOff(void) : "Disable sun rendering."
+	input SetColor(color255) : "Change the sun's color. Format: <Red 0-255> <Green 0-255> <Blue 0-255>"
+]
+
+@BaseClass base(Targetname, Parentname, Angles) color(255 0 255) sphere(m_flRadius) = BaseScripted
+[
+	m_iszEntity(target_destination) : "Target NPC" : : "The name or class name (such as 'npc_zombie') of an NPC to use for this script."
+	m_iszIdle(string) : "Pre Action Idle Animation" : "" : "The name of the sequence (such as 'idle01') or activity (such as 'ACT_IDLE') to play before the action animation if the NPC must wait for the script to be triggered. Use 'Start on Spawn' flag or MoveToPosition input to play this idle animation."
+	m_iszEntry(string) : "Entry Animation" : "" : "The name of the sequence (such as 'reload02') or activity (such as 'ACT_RELOAD') to play when the sequence starts, before transitioning to play the main action sequence."
+	m_iszPlay(string) : "Action Animation" : "" : "The name of the main sequence (such as 'reload02') or activity (such as 'ACT_RELOAD') to play."
+	m_iszPostIdle(string) : "Post Action Idle Animation" : "" : "The name of the sequence (such as 'idle01') or activity (such as 'ACT_IDLE') to play after the action animation."
+	m_iszCustomMove(string) : "Custom Move Animation" : "" : "Used in conjunction with the 'Custom movement' setting for the 'Move to Position' property, specifies the sequence (such as 'crouch_run01') or activity (such as 'ACT_RUN') to use while moving to the scripted position."
+	m_bLoopActionSequence(Choices) : "Loop Action Animation?" : 0 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	m_bSynchPostIdles(Choices) : "Synch Post Idles?" : 0 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	m_flRadius(integer) : "Search Radius (0=everywhere)" : 0 : "Radius to search within for an NPC to use. 0 searches everywhere."
+	m_flRepeat(integer) : "Repeat Rate ms" : 0
+	m_fMoveTo(Choices) : "Move to Position" : 1 =
+	[
+		0 : "No"
+		1 : "Walk"
+		2 : "Run"
+		3 : "Custom movement"
+		4 : "Instantaneous"
+		5 : "No - Turn to Face"
+	]
+	m_iszNextScript(target_destination) : "Next Script" : : "The name of the script to run immediately after this script completes. The NPC will not return to AI between the two scripts."
+	m_bIgnoreGravity(choices) : "Ignore Gravity on NPC during script" : 0 : "If this is set to 'Yes', the NPC will not be subject to gravity while playing this script." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	m_bDisableNPCCollisions(choices) : "Disable NPC collisions during script" : 0 : "Useful for when NPCs playing scripts must interpenetrate while riding on trains, elevators, etc. This only disables collisions between the NPCs in the script and must be enabled on BOTH scripted_sequences." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+
+	// Inputs
+	input BeginSequence(void) : "Summons an NPC to act out the scripted sequence."
+	input MoveToPosition(void) : "Summons an NPC to the script location. They will play their scripted idle (or ACT_IDLE if none is specified) until BeginSequence is triggered."
+	input CancelSequence(void) : "Stops the scripted sequence. If fired after a sequence starts, this input will not take effect until the NPC finishes playing the scripted action animation."
+
+	// Outputs
+	output OnBeginSequence(void) : "Fires when the action animation begins playing."
+	output OnEndSequence(void) : "Fires when the action animation completes."
+	output OnCancelSequence(void) : "Fires when the sequence is cancelled."
+	output OnCancelFailedSequence(void) : "Fires when the sequence is cancelled without ever playing (OnCancelSequence will also fire)."
+	output OnScriptEvent01(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 1 } in the QC."
+	output OnScriptEvent02(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 2 } in the QC."
+	output OnScriptEvent03(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 3 } in the QC."
+	output OnScriptEvent04(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 4 } in the QC."
+	output OnScriptEvent05(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 5 } in the QC."
+	output OnScriptEvent06(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 6 } in the QC."
+	output OnScriptEvent07(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 7 } in the QC."
+	output OnScriptEvent08(void) : "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 8 } in the QC."
+]
+
+@PointClass base(BaseScripted, Angles, DXLevelChoice) studio("models/editor/scriptedsequence.mdl") sphere(m_flRadius) = scripted_sequence :
+	"Grabs an NPC and makes them play a specified set of animations. The NPC can be told to move to the scripted sequence position or can "+
+	"be told to play the script wherever they currently are. "+
+	"Multiple scripted sequences of the same name will frame-synchronize in the action animation once all the actors have moved to position. "+
+	"This allows tight interaction between actors (one actor grabbing another, hitting them, etc.) The flow is as follows:\n\n"+
+	"1) Move to position using the specified movement animation. If 'Move to Position' is set to NONE, skip to step 2.\n"+
+	"2) If forced to wait for another actor to move to position, play the pre-action idle animation, otherwise skip to step 3. If there is no pre-action idle specified, ACT_IDLE is used.\n"+
+	"3) Fire the OnBeginSequence output.\n"+
+	"4) Play the action animation. If no action animation is specified, skip to step 5.\n"+
+	"5) Play the post-action idle animation. If none is specified, skip to step 6. If the 'Loop in Post Idle' spawnflag is set, keep playing the post-action idle until the script is cancelled. If no post-action idle animation is specified, ACT_IDLE is used.\n"+
+	"6) Fire the OnEndSequence output.\n"+
+	"7) If a next script to play is specified, hand the NPC to the next script and repeat this process for that script.\n\n"+
+	"The MoveToPosition input runs steps 1 and 2, then waits while playing the pre-action idle animation until the BeginSequence input is received.\n\n"+
+	"If the sequence has motion extraction in it, set the 'Don't Teleport NPC On End' spawnflag."
+[
+	spawnflags(Flags) = 
+	[
+		4 : "Repeatable" : 0
+		8 : "Leave Corpse" : 0
+		16 : "Start on Spawn" : 0
+		32: "No Interruptions" : 0
+		64: "Override AI" : 0
+		128: "Don't Teleport NPC On End" : 0
+		256: "Loop in Post Idle" : 0
+		512: "Priority Script" : 0
+		4096: "Allow actor death" : 0
+	]
+
+	
+	onplayerdeath(choices) : "On player death" : 0 : "What should this entity do if the player dies" =
+	[
+		0 : "Do Nothing"
+		1 : "Cancel Script and return to AI"
+	]
+]
+
+
+@PointClass base(Targetname) sphere(m_flRadius) color(255 0 255) iconsprite("editor/aiscripted_schedule") = aiscripted_schedule :
+	"Issues a command to an NPC without taking the NPC out of its AI. This does not seize control of the NPC as " +
+	"a scripted_sequence does" 
+[
+	m_iszEntity(target_destination) : "Target NPC" : : "The name or classname of an NPC to use."
+	m_flRadius(integer) : "Search Radius (0=everywhere)" : 0 : "Radius to search within for an NPC to use. 0 searches everywhere."
+
+	graball(choices)  : "All in radius" : 0: "Whether to grab all matching NPCs in the specified radius, instead of just one"  =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	spawnflags(Flags) = 
+	[
+		4 : "Repeatable" : 1
+		1024 : "Search Cyclically" : 0
+		2048 : "Don't Complain" : 0
+	]
+
+	forcestate(choices) : "AI state to set" : 0 =
+	[
+		0 : "<None>"
+		1 : "Set state to IDLE"
+		2 : "Set state to ALERT"
+		3 : "Set state to COMBAT"
+	]
+		
+	schedule(choices) : "Schedule to run" : 1 =
+	[
+		0 : "<None>"
+		1 : "Walk to Goal Entity"
+		2 : "Run to Goal Entity"
+		3 : "Set enemy to Goal Entity"
+		4 : "Walk Goal Path"
+		5 : "Run Goal Path"
+		6 : "Set enemy to Goal Entity AND Run to Goal Entity"
+	]
+	
+	interruptability(choices) : "Interruptability" : 0 =
+	[
+		0 : "General"
+		1 : "Damage or Death"
+		2 : "Death"
+	]
+
+	goalent(target_destination) : "Goal entity" : : "Provides the name of a schedule-specific goal entity (see 'Schedule to run')"
+
+	// Inputs
+	input StartSchedule(void) : "Starts the scripted schedule. This will first locate an NPC that " +
+		"matches the given target, then tell the NPC to run the specified schedule."
+]
+
+@PointClass color(0 0 255) base(Targetname) iconsprite("editor/choreo_scene.vmt") = logic_choreographed_scene :
+	"Manages a choreographed scene of one or more actors."
+
+[
+	// Keys
+	SceneFile(scene) : "Scene file"
+
+	// Links
+	target1(target_destination) : "Target 1"
+	target2(target_destination) : "Target 2"
+	target3(target_destination) : "Target 3"
+	target4(target_destination) : "Target 4"
+	target5(target_destination) : "Target 5"
+	target6(target_destination) : "Target 6"
+	target7(target_destination) : "Target 7"
+	target8(target_destination) : "Target 8"
+
+	busyactor(choices) : "If an Actor is talking..." : 1 : "What to do if an actor this scene needs is already talking when this scene is told to start." =
+	[
+		0: "Start immediately"
+		1: "Wait for actor to finish"
+		2: "Interrupt at next interrupt event"
+		3: "Cancel at next interrupt event"
+	]
+
+	// Inputs
+	input Start(void) : "Starts playback of the scene file"
+	input Pause(void) : "Pauses playback of the scene file"
+	input Resume(void) : "Resumes playback of the scene if it has been paused"
+	input Cancel(void) : "Cancels playback of the scene"
+	input CancelAtNextInterrupt(void) : "Cancels playback of the scene at the next interrupt event in the scene."
+	input PitchShift(float) : "Multiplies the the pitch"
+
+	input InterjectResponse(string) : "Finds an actor who can respond to the specified concept string while the scene continues playing"
+
+	input StopWaitingForActor(void) : "Stop waiting on an actor to stop talking."
+
+	// Outputs
+	output OnStart(void) : "The scene has started"
+	output OnCompletion(void) : "The scene has completed"
+	output OnCanceled(void) : "The scene has been canceled"
+	output OnTrigger1(void) : "Scene trigger 1"
+	output OnTrigger2(void) : "Scene trigger 2"
+	output OnTrigger3(void) : "Scene trigger 3"
+	output OnTrigger4(void) : "Scene trigger 4"
+	output OnTrigger5(void) : "Scene trigger 5"
+	output OnTrigger6(void) : "Scene trigger 6"
+	output OnTrigger7(void) : "Scene trigger 7"
+	output OnTrigger8(void) : "Scene trigger 8"
+	output OnTrigger9(void) : "Scene trigger 9"
+	output OnTrigger10(void) : "Scene trigger 10"
+	output OnTrigger11(void) : "Scene trigger 11"
+	output OnTrigger12(void) : "Scene trigger 12"
+	output OnTrigger13(void) : "Scene trigger 13"
+	output OnTrigger14(void) : "Scene trigger 14"
+	output OnTrigger15(void) : "Scene trigger 15"
+	output OnTrigger16(void) : "Scene trigger 16"
+
+	onplayerdeath(choices) : "On player death" : 0 : "What should this entity do if the player dies" =
+	[
+		0 : "Do Nothing"
+		1 : "Cancel Script and return to AI"
+	]
+]
+
+@PointClass color(0 0 255) base(Targetname) iconsprite("editor/choreo_manager.vmt") = logic_scene_list_manager :
+	"Manages a list of logic_choreographed_scene entities. Store choreo scenes in them in order that they will be played by other inputs. Whenever a scene plays, the manager will remove all scenes before that one in the list. The name of another logic_scene_list_manager can be entered in a slot instead of an invididual scene, which will cause all scenes in that manager to be removed when a later scene in this list is played."
+[
+	scene0(target_destination) : "Scene 1" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene1(target_destination) : "Scene 2" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene2(target_destination) : "Scene 3" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene3(target_destination) : "Scene 4" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene4(target_destination) : "Scene 5" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene5(target_destination) : "Scene 6" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene6(target_destination) : "Scene 7" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene7(target_destination) : "Scene 8" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene8(target_destination) : "Scene 9" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene9(target_destination) : "Scene 10" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene10(target_destination) : "Scene 11" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene11(target_destination) : "Scene 12" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene12(target_destination) : "Scene 13" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene13(target_destination) : "Scene 14" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene14(target_destination) : "Scene 15" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+	scene15(target_destination) : "Scene 16" : "" : "The name of a logic_choreographed_scene, or logic_scene_list_manager."
+
+	// Inputs
+	input Shutdown(void) : "Remove the manager and all scenes referenced by it (and all scenes referenced by logic_scene_list_manager's embedded in this one)."
+]
+
+@PointClass base(Targetname, Parentname) sphere(volume) iconsprite("editor/ai_sound.vmt") = ai_sound :
+	"This entity makes sounds or smells that can be sensed by NPCs, butnot by the player. This can be used " +
+	"to cause reactions in nearby NPCs.\n\n" +
+	"Sound Types\n" +
+	"  Combat: Will cause most NPCs to become alert\n" +
+	"  World: Will cause most NPCs to become alert\n" +
+	"  Danger: Will cause most NPCs to move away from the position of the sound\n" +
+	"  Bullet Impact: \n" +
+	"  Carcass: \n" +
+	"  Meat: \n" +
+	"  Garbage: \n" +
+	"  Thumper: causes antlions to run away briefly\n" +
+	"  Readiness: (Low, Medium, High) Causes player companions that can hear this sound to change readiness\n"
+[
+	//input InsertSound(Integer) : "THIS IS NOW OBSOLETE. Use InsertAISound"
+	input EmitAISound(void) : "Make the sound."
+
+	volume(integer) : "Volume" : 120 : "How far away this sound can be heard. This is a radius."
+	duration(float) : "Duration" : "0.5" : "How long the sound persists each time you insert it."
+
+	soundtype(choices) : "Sound Type" : 0 : "The type of sound or smell will determine the reaction of NPCs that sense it." =
+	[
+		0: "Select one"
+		1: "Combat"
+		2: "World"
+		//4: "Player (Don't use)"
+		8: "Danger"
+		16: "Bullet Impact"
+		32: "Carcass"
+		64: "Meat"
+		128: "Garbage"
+		256: "Thumper"
+		4096: "Move Away - Most NPCs will clear the radius of this sound when heard."
+		16384 : "Readiness - Low"
+		32768 : "Readiness - Medium"
+		65536 : "Readiness - High"
+	]
+
+	soundcontext(choices) : "Additional sound context (optional)" : 0 : "Optional settings specifying such things as who can or cannot hear the sound." =
+	[
+		0 : "Select one"
+		8388608 : "Only Combine hear"
+		67108864 : "Combine cannot hear"
+	]
+
+	locationproxy(target_destination) : "Location Proxy" : "" : "The name of an entity to use as a proxy to determine the location at which to make the sound. If you specify an entity here, the sound will be made at that entity's location (!player included)" 
+]
+
+@PointClass base(Targetname, Angles) size(16 16 16) line(255 255 255, targetname, target) color(247 181 82) = path_corner : "Generic path point"
+[
+	spawnflags(Flags) =
+	[
+		1: "Wait for retrigger" : 0
+		2: "Teleport to THIS path_corner" : 0
+	]
+
+	target(target_destination) : "Next stop target"
+	wait(integer) : "Wait here (secs)" : 0
+	speed(integer) : "New Train Speed" : 0
+	yaw_speed(integer) : "New Train rot. Speed" : 0
+
+	// Inputs 
+	input SetNextPathCorner(string) : "Sets next pathcorner"
+
+	// Outputs
+	output OnPass(void) : "Fires when a path follower passes this point"
+]

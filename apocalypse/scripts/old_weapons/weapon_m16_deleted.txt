@@ -1,0 +1,82 @@
+"WeaponData"
+{
+	"PrintName" "#Weapon_M16"
+	"ViewModel" "models/v_models/v_rifle.mdl"
+	"PlayerModel" "models/w_models/weapons/w_rifle_m16a2.mdl"
+	"Damage" "15"
+	"Bullets" "1"
+	"FireRate" "10"
+	"FOV" "90"
+	"BulletSpread" "0.01745"
+	"Distance" "5000"
+	"PenetrationDepth" "15"
+	"Bucket" "0"
+	"BucketPosition" "1"
+	"ClipSize" "20"
+	"Clip2Size" "0"
+	"DefaultClip" "20"
+	"DefaultClip2" "0"
+	"PrimaryAmmo" "Rifle"
+	"SecondaryAmmo" "None"
+	"BuiltRightHanded" "1"
+	"AllowFlipping" "0"
+	"MeleeWeapon" "0"
+	"Weight" "2"
+	"ItemFlags" "0"
+	"Rumble" "4"
+	"SoundData"
+	{
+		"single_shot" "M16.Shot"
+		"empty" "M16.Empty"
+		"special1" "M16.ShotDistant"
+		"reload" "M16.Deploy"
+	}
+	"TextureData"
+	{
+		"weapon"
+		{
+			"font" "WeaponIcons"
+			"character" "a"
+		}
+		"weapon_s"
+		{
+			"font" "WeaponIconsSelected"
+			"character" "a"
+		}
+		"ammo"
+		{
+			"font" "WeaponIcons"
+			"character" "r"
+		}
+		"crosshair"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+		"autoaim"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+	}
+	"ModelBounds"
+	{
+		"Viewmodel"
+		{
+			"Mins" "-10 -4 -13"
+			"Maxs" "21 9 -1"
+		}
+		"World"
+		{
+			"Mins" "-10 -7 -6"
+			"Maxs" "22 8 9"
+		}
+	}
+	"IdealDistance" "3000"
+}

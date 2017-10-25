@@ -1,0 +1,13 @@
+BlockLookAround
+SpawnPosition
+BestWeapon
+DejectedFriend
+SavedPosition
+InvestigateLocation
+
+NearbyThreats
+NearbyFriends
+NearbyDangerousThreats
+
+AMR-16
+M308 RIFLE

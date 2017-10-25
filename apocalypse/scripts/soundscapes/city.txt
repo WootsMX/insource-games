@@ -1,0 +1,68 @@
+"Background.Battleloop"
+{
+	"playrandom"
+	{
+		"time"			"6,24"
+		"volume"		"0.2"
+		"pitch"			"90,110"
+		"soundlevel"	"SNDLVL_NORM"
+		"position" 		"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/levels/streetwar/city_battle1.wav"
+			"wave"	"ambient/levels/streetwar/city_battle2.wav"
+			"wave"	"ambient/levels/streetwar/city_battle3.wav"
+			"wave"	"ambient/levels/streetwar/city_battle4.wav"
+			"wave"	"ambient/levels/streetwar/city_battle5.wav"
+			"wave"	"ambient/levels/streetwar/city_battle6.wav"
+			"wave"	"ambient/levels/streetwar/city_battle7.wav"
+			"wave"	"ambient/levels/streetwar/city_battle8.wav"
+			"wave"	"ambient/levels/streetwar/city_battle9.wav"
+			"wave"	"ambient/levels/streetwar/city_battle10.wav"
+			"wave"	"ambient/levels/streetwar/city_battle11.wav"
+			"wave"	"ambient/levels/streetwar/city_battle12.wav"
+			"wave"	"ambient/levels/streetwar/city_battle13.wav"
+			"wave"	"ambient/levels/streetwar/city_battle14.wav"
+			"wave"	"ambient/levels/streetwar/city_battle15.wav"
+			"wave"	"ambient/levels/streetwar/city_battle16.wav"
+			"wave"	"ambient/levels/streetwar/city_battle17.wav"
+			"wave"	"ambient/levels/streetwar/city_battle18.wav"
+			"wave"	"ambient/levels/streetwar/city_battle19.wav"
+		}	
+	}
+
+	"playrandom"
+	{
+		"time"			"12,32"
+		"volume"		"0.1"
+		"pitch"			"90,110"
+		"soundlevel"	"SNDLVL_NORM"
+		"position" 		"random"
+
+		"rndwave"
+		{
+			"wave"	"ambient/levels/streetwar/city_chant1.wav"
+			"wave"	"ambient/levels/streetwar/city_riot1.wav"
+			"wave"	"ambient/levels/streetwar/city_riot2.wav"
+			"wave"	"ambient/levels/streetwar/heli_distant1.wav"
+		}	
+	}
+
+	"playrandom"
+	{
+		"time" 			"30,60"
+		"volume"		"0.1"
+		"pitch"			"80,120"
+		"soundlevel"	"SNDLVL_NORM"
+		"position" 		"random"
+
+		"rndwave"
+		{
+			"wave" 		"ambient/explosions/exp1.wav"
+			"wave" 		"ambient/explosions/exp2.wav"
+			"wave" 		"ambient/explosions/exp3.wav"
+			"wave" 		"ambient/explosions/exp4.wav"
+		}
+	}
+}

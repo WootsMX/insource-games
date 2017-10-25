@@ -1,0 +1,45 @@
+"Mechanic_EllisStoriesI01"
+{
+	"volume" "0.8"
+	"wave" "vo/Mechanic/EllisStoriesI01.wav"
+	"channel" "CHAN_VOICE"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}
+
+"Player.Teengirl_DLC2Intro10"
+{
+	"volume" "0.8"
+	"wave" "vo/teengirl/dlc2intro10.wav"
+	"channel" "CHAN_VOICE"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}
+
+"Player.Teengirl_DLC2Misc01"
+{
+	"volume" "0.8"
+	"wave" "vo/teengirl/dlc2misc01.wav"
+	"channel" "CHAN_VOICE"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}
+
+"Player.Teengirl_Leadon12"
+{
+	"volume" "0.8"
+	"wave" "vo/teengirl/leadon12.wav"
+	"channel" "CHAN_VOICE"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+}
+
+"Animation.GarageOutro"
+{
+	"volume" "1.0"
+	"channel" "CHAN_STATIC"
+	"pitch" "PITCH_NORM"
+	"soundlevel" "SNDLVL_NORM"
+	"soundlevel" "SNDLVL_90dB"
+	"wave" "animation/garage_outro.wav"
+}

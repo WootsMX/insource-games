@@ -1,0 +1,142 @@
+//---------------------------------------------------------------
+// Lluvia ligera
+//---------------------------------------------------------------
+"Weather.Light.Rain"
+{
+	"dsp"			"20"
+	"dsp_volume"	"0.8"
+
+	"playlooping"
+	{
+		"volume"		"0.4"
+		"pitch"			"100"
+		"soundlevel"	"SNDLVL_NORM"
+
+		"wave"	"ambient/weather/aztec_rain_lp_01.wav"
+	}
+
+	"playrandom"
+	{
+		"time"			"6,12"
+		"volume"		"0.2,0.4"
+		"pitch"			"90,110"
+		"soundlevel"	"SNDLVL_NORM"
+
+		"rndwave"
+		{
+			"wave"	"ambient/wind/wind_gust_01.wav"
+			"wave"	"ambient/wind/wind_gust_02.wav"
+			"wave"	"ambient/wind/wind_gust_03.wav"
+			"wave"	"ambient/wind/wind_gust_04.wav"
+			"wave"	"ambient/wind/wind_gust_05.wav"
+			"wave"	"ambient/wind/wind_gust_06.wav"
+			"wave"	"ambient/wind/wind_gust_07.wav"
+			"wave"	"ambient/wind/wind_gust_08.wav"
+		}
+	}
+
+	"playlooping"
+	{
+		"volume"		"0.1"
+		"pitch"			"100"
+		"soundlevel"	"SNDLVL_65dB"
+
+		"wave"	"ambient/wind/flag_and_rope_loop.wav"
+	}
+}
+
+//---------------------------------------------------------------
+// Lluvia ligera con relampagos
+//---------------------------------------------------------------
+"Weather.Light.Thunderstorm"
+{
+	"dsp"			"20"
+	"dsp_volume"	"0.8"
+
+	"playsoundscape"
+	{
+		"name"	"Weather.Light.Rain"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"Background.BattleLoop"
+	}
+
+	"playrandom"
+	{
+		"time"			"25,45"
+		"volume"		"0.9,1.0"
+		"pitch"			"90,110"
+		"soundlevel"	"SNDLVL_90dB"
+
+		"rndwave"
+		{
+			"wave"	"ambient/weather/thunderstorm/thunder_1.wav"
+			"wave"	"ambient/weather/thunderstorm/thunder_2.wav"
+			"wave"	"ambient/weather/thunderstorm/thunder_3.wav"
+			"wave"	"ambient/weather/thunderstorm/thunder_far_away_1.wav"
+			"wave"	"ambient/weather/thunderstorm/thunder_far_away_2.wav"
+		}
+	}
+}
+
+//---------------------------------------------------------------
+// Lluvia ligera (Interior de un edificio)
+//---------------------------------------------------------------
+"Weather.Interior.Light.Rain"
+{
+	"dsp"			"9"
+	"dsp_volume"	"1"
+
+	"playlooping"
+	{
+		"volume"		"0.4,0.5"
+		"pitch"			"100"
+		"soundlevel"	"SNDLVL_NORM"
+
+		"wave"	"ambient/weather/aztec_int_rain_lp_01.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"		"0.1"
+		"pitch"			"100"
+		"soundlevel"	"SNDLVL_65dB"
+
+		"wave"	"ambient/wind/flag_and_rope_loop.wav"
+	}
+}
+
+//---------------------------------------------------------------
+// Lluvia ligera con relampagos (Interior de un edificio)
+//---------------------------------------------------------------
+"Weather.Interior.Light.Thunderstorm"
+{
+	"dsp"			"9"
+	"dsp_volume"	"1"
+
+	"playsoundscape"
+	{
+		"name"	"Weather.Interior.Light.Rain"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"Background.BattleLoop"
+	}
+
+	"playrandom"
+	{
+		"time"			"25,45"
+		"volume"		"0.8"
+		"pitch"			"90,100,110"
+		"soundlevel"	"SNDLVL_90dB"
+
+		"rndwave"
+		{
+			"wave"	"ambient/weather/thunderstorm/thunder_far_away_1.wav"
+			"wave"	"ambient/weather/thunderstorm/thunder_far_away_2.wav"
+		}
+	}
+}

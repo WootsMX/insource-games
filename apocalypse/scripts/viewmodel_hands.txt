@@ -1,0 +1,20 @@
+"ViewmodelHands"
+{
+	// Abigail
+	"survivor_teenangst"
+	{
+		"model" "weapons/arms/v_arms_zoey.mdl"
+	}
+
+	// Soldado normal
+	"survivor_gambler"
+	{
+		"model" "weapons/arms/v_arms_gambler_new.mdl"
+	}
+
+	// Soldado líder
+	"survivor_biker"
+	{
+		"model" "weapons/arms/v_arms_francis.mdl"
+	}
+}

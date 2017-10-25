@@ -1,0 +1,41 @@
+@include "insource.fgd"
+
+//
+// NPC's
+//
+
+@PointClass base(BaseNPC, Parentname) studio("models/infected/common_male01.mdl") = npc_infected : 
+	"Infectado"
+[
+	
+]
+
+//
+// Weapons
+//
+
+@BaseClass color(0 0 200) base(Targetname, Angles) sphere(fademindist) sphere(fademaxdist) = Weapon
+[
+	spawnflags(Flags) =
+	[
+		1 : "Start constrained" : 0
+		2 : "Deny player pickup (reserve for NPC)" : 0
+	]
+
+	output OnPlayerUse(void) : "Fires when the player +uses this weapon"
+	output OnPlayerPickup(void) : "Fires when the player picks up this weapon"
+	output OnNPCPickup(void) : "Fires when an NPC picks up this weapon"
+	output OnCacheInteraction(void) : "Fires when the player 'proves' they've found this weapon. Fires on: Player Touch, +USE pickup, Physcannon pickup, Physcannon punt."
+
+	fademindist(float) : "Start Fade Dist/Pixels" : -1 : "Distance at which the prop starts to fade (<0 = use fademaxdist). If 'Screen Space Fade' is selected, this represents the number of pixels wide covered by the prop when it starts to fade."
+	fademaxdist(float) : "End Fade Dist/Pixels" : 0 : "Maximum distance at which the prop is visible (0 = don't fade out). If 'Screen Space Fade' is selected, this represents the *minimum* number of pixels wide covered by the prop when it fades."
+	fadescale(float) : "Fade Scale" : 1 : "If you specify a fade in the worldspawn, or if the engine is running under dx7, then the engine will forcibly fade out props even if fademindist/fademaxdist isn't specified." +
+												 " This scale factor gives you some control over the fade. Using 0 here turns off the forcible fades." +
+]
+
+@PointClass base(Weapon) studio("models/w_models/weapons/w_rifle_ak47.mdl") = weapon_rifle_ak47 : "Rifle AK47" []
+@PointClass base(Weapon) studio("models/w_models/weapons/w_rifle_m16a2.mdl") = weapon_rifle_m16 : "Rifle M16" []
+@PointClass base(Weapon) studio("models/w_models/weapons/w_smg_uzi.mdl") = weapon_smg : "SMG" []
+@PointClass base(Weapon) studio("models/w_models/weapons/w_pistol_a.mdl") = weapon_pistol_p220 : "Pistol P220" []
+@PointClass base(Weapon) studio("models/w_models/weapons/w_shotgun_spas.mdl") = weapon_shotgun_combat : "Combat Shotgun" []
+@PointClass base(Weapon) studio("models/w_models/weapons/w_sniper_military.mdl") = weapon_rifle_sniper : "Military Sniper" []

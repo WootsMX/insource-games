@@ -1,0 +1,94 @@
+"WeaponData"
+{
+	"PrintName" "#Weapon_M4A1"
+	"ViewModel" "models/weapons/cstrike/c_rif_m4a1.mdl"
+	"PlayerModel" "models/weapons/w_rif_m4a1.mdl"
+	"Damage" "22"
+	"Bullets" "1"
+	"FireRate" "8"
+	"VerticalPunch"	"1"
+	"SpreadPerShot" "0.00873"
+	"CrouchSpread" "0.7"
+	"BotSpread" "1.3"
+	"JumpSpread" "1.3"
+	"DejectedSpread" "1.3"
+	"MovingSpread" "1.1"
+	"AddonAttachment" ""
+	"FOV" "90"
+	"Distance" "10000"
+	"IdealDistance" "5000"
+	"PenetrationNumLayers" "3"
+	"PenetrationMaxDistance" "15"
+	"Bucket" "0"
+	"BucketPosition" "1"
+	"ClipSize" "30"
+	"Clip2Size" "0"
+	"DefaultClip" "30"
+	"DefaultClip2" "0"
+	"PrimaryAmmo" "AMMO_TYPE_ASSAULTRIFLE"
+	"SecondaryAmmo" "None"
+	"BuiltRightHanded" "1"
+	"AllowFlipping" "0"
+	"MeleeWeapon" "0"
+	"Weight" "2"
+	"ItemFlags" "0"
+	"Rumble" "4"
+	"SoundData"
+	{
+		"single_shot" "Weapon_M4A1.Fire"
+		"empty" "Default.ClipEmpty_Rifle"
+	}
+	"TextureData"
+	{
+		"weapon"
+		{
+			"file"		"vgui/hud/iconsheet2"
+			"x"			"224"
+			"y"			"128"
+			"width"		"160"
+			"height"	"64"
+		}
+		"weapon_s"
+		{
+			"file"		"vgui/hud/iconsheet2"
+			"x"			"224"
+			"y"			"128"
+			"width"		"160"
+			"height"	"64"
+		}
+		"ammo"
+		{
+			"font" "WeaponIcons"
+			"character" "r"
+		}
+		"crosshair"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+		"autoaim"
+		{
+			"file" "sprites/crosshairs"
+			"x" "0"
+			"y" "48"
+			"width" "24"
+			"height" "24"
+		}
+	}
+	"ModelBounds"
+	{
+		"Viewmodel"
+		{
+			Mins	"-10 -2 -13"
+			Maxs	"30 10 0"
+		}
+		"World"
+		{
+			Mins	"-8 -9 -6"
+			Maxs	"29 9 8"
+		}
+	}
+}

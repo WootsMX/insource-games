@@ -1,0 +1,8 @@
+"AlarmGeneric"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "VOL_NORM"
+	"pitch" "100"
+	"soundlevel" "SNDLVL_130dB"
+	"wave" "ambient/alarms/alarm_siren_loop_11.wav"
+}

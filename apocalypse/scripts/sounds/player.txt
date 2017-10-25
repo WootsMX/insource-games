@@ -1,0 +1,207 @@
+"Player.FlashlightOn"
+{
+	"channel" "CHAN_AUTO"
+	"volume" "0.8"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+	"wave" "items/flashlight1.wav"
+}
+"Player.FlashlightOff"
+{
+	"channel" "CHAN_AUTO"
+	"volume" "0.8"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "90"
+	"wave" "items/flashlight1.wav"
+}
+"HL2Player.Use"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.4"
+	"soundlevel" "SNDLVL_75dB"
+	"wave" "common/wpn_select.wav"
+}
+"HL2Player.UseNPC"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.4"
+	"soundlevel" "SNDLVL_75dB"
+	"wave" "common/wpn_select.wav"
+}
+"HL2Player.UseDeny"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.4"
+	"soundlevel" "SNDLVL_75dB"
+	"wave" "common/wpn_denyselect.wav"
+}
+"Player.Death"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "0.8"
+	"soundlevel" "SNDLVL_IDLE"
+	"rndwave"
+	{
+		"wave" "player/default/death\death3.wav"
+		"wave" "player/default/death\death4.wav"
+		"wave" "player/default/death\death5.wav"
+		"wave" "player/default/death\death6.wav"
+		"wave" "player/default/death\death1.wav"
+		"wave" "player/default/death\death2.wav"
+	}
+	"pitch" "PITCH_NORM"
+}
+"Player.PlasmaDamage"
+{
+	"channel" "CHAN_BODY"
+	"volume" "0.5"
+	"soundlevel" "SNDLVL_75dB"
+	"wave" "player/general/flesh_burn.wav"
+}
+"Player.SonicDamage"
+{
+	"channel" "CHAN_BODY"
+	"volume" "0.7"
+	"soundlevel" "SNDLVL_75dB"
+	"rndwave"
+	{
+		"wave" "player/pl_pain5.wav"
+		"wave" "player/pl_pain6.wav"
+		"wave" "player/pl_pain7.wav"
+	}
+}
+"Player.DrownStart"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_75dB"
+	"pitch" "90,110"
+	"wave" "player/pl_drown1.wav"
+}
+"Player.Swim"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "0.5"
+	"pitch" "PITCH_NORM"
+	"soundlevel" "SNDLVL_NORM"
+	"rndwave"
+	{
+		"wave" "player/footsteps/wade4.wav"
+		"wave" "player/footsteps/wade5.wav"
+		"wave" "player/footsteps/wade6.wav"
+		"wave" "player/footsteps/wade7.wav"
+		"wave" "player/footsteps/wade1.wav"
+		"wave" "player/footsteps/wade2.wav"
+		"wave" "player/footsteps/wade3.wav"
+	}
+}
+"Player.FallDamage"
+{
+	"channel" "CHAN_AUTO"
+	"volume" "0.75"
+	"pitch" "90,110"
+	"soundlevel" "SNDLVL_NORM"
+	"rndwave"
+	{
+		"wave" "player/pl_fallpain1.wav"
+		"wave" "player/pl_fallpain3.wav"
+	}
+}
+"Player.FallGib"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.75"
+	"pitch" "90,110"
+	"soundlevel" "SNDLVL_NORM"
+	"rndwave"
+	{
+		"wave" "physics/body/body_medium_break2.wav"
+	}
+}
+"Player.DrownContinue"
+{
+	"channel" "CHAN_VOICE"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "90,110"
+	"rndwave"
+	{
+		"wave" "player/pl_drown1.wav"
+		"wave" "player/pl_drown2.wav"
+		"wave" "player/pl_drown3.wav"
+	}
+}
+"Player.Wade"
+{
+	"channel" "CHAN_BODY"
+	"volume" "0.25"
+	"soundlevel" "SNDLVL_NORM"
+	"rndwave"
+	{
+		"wave" "player/footsteps/wade2.wav"
+		"wave" "player/footsteps/wade3.wav"
+		"wave" "player/footsteps/wade4.wav"
+		"wave" "player/footsteps/wade5.wav"
+		"wave" "player/footsteps/wade6.wav"
+		"wave" "player/footsteps/wade7.wav"
+		"wave" "player/footsteps/wade1.wav"
+	}
+	"pitch" "90,100,110"
+}
+"Player.AmbientUnderWater"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "0.22"
+	"soundlevel" "SNDLVL_NONE"
+	"wave" "ambient/water/underwater.wav"
+}
+"Player.UseDeny"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.4"
+	"soundlevel" "SNDLVL_75dB"
+	"wave" "common/wpn_select.wav"
+}
+"Player.PickupWeapon"
+{
+	"channel" "CHAN_ITEM"
+	"volume" "0.8"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "95,105"
+	"wave" "items/ammopickup.wav"
+}
+"Geiger.BeepLow"
+{
+	"channel" "CHAN_STATIC"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"rndwave"
+	{
+		"wave" "player/geiger1.wav"
+		"wave" "player/geiger2.wav"
+	}
+}
+"Geiger.BeepHigh"
+{
+	"channel" "CHAN_STATIC"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"rndwave"
+	{
+		"wave" "player/geiger2.wav"
+		"wave" "player/geiger3.wav"
+	}
+}
+"Player.Pain"
+{
+	"volume" "0.8,1.0"
+	"channel" "CHAN_AUTO"
+	"soundlevel" "SNDLVL_NORM"
+	"pitch" "PITCH_NORM"
+	"rndwave"
+	{
+		"wave" "player/default/damage\damage1.wav"
+		"wave" "player/default/damage\damage2.wav"
+		"wave" "player/default/damage\damage3.wav"
+	}
+}

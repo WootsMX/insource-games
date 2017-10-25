@@ -1,0 +1,90 @@
+"Weapon_AWP.Fire"
+{
+	"volume" "0.85"
+	"pitch" "95,105"
+	"channel" "CHAN_WEAPON"
+	"soundlevel" "SNDLVL_100dB"
+	"wave" ")weapons/scout/gunfire/scout_fire-1.wav"
+}
+"Weapon_AWP.HelpingHandExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Weapon_AWP.HelpingHandRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Weapon_AWP.ItemPickupExtend"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.50"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandextend.wav"
+}
+
+"Weapon_AWP.ItemPickupRetract"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.20"
+	"wave" ")weapons/rifle/gunother/rifle_helpinghandretract.wav"
+}
+
+"Weapon_AWP.Deploy"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.80,0.77"
+	"wave" ")weapons/sniper_military/gunother/sniper_military_deploy_1.wav"
+}
+
+"Weapon_AWP.ClipIn"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/scout/gunother/scout_clipin.wav"
+}
+
+"Weapon_AWP.ClipOut"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/scout/gunother/scout_clipout.wav"
+}
+
+"Weapon_AWP.ClipLocked"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/scout/gunother/scout_clipin_locked.wav"
+}
+
+"Weapon_AWP.Boltback"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/scout/gunother/scout_bolt.wav"
+}
+
+"Weapon_AWP.BoltForward"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"wave" ")weapons/scout/gunother/scout_bolt_forward.wav"
+}
+
+"Weapon_AWP.Zoom"
+{
+	"channel" "CHAN_ITEM"
+	"soundlevel" "SNDLVL_NORM"
+	"volume" "0.75"
+	"wave" "weapons/sniper_military/gunother/sniper_military_zoom.wav"
+}

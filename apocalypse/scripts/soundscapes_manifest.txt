@@ -1,0 +1,6 @@
+"soundscapes_manifest"
+{
+	"file" "scripts/soundscapes/nature.txt"
+	"file" "scripts/soundscapes/weather.txt"
+	"file" "scripts/soundscapes/city.txt"
+}
