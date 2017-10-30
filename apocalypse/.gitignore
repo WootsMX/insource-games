@@ -1,3 +1,5 @@
+/cfg/config.cfg
+/cfg/video.txt
 /bin/*
 !/bin/client.dll
 !/bin/server.dll
@@ -27,6 +29,7 @@
 /content/addons/
 /content/games/
 /content/base/materials/
+/content/base/models/shadertest/
 /content/base/sound/
 /content/mod/_hl2/
 /content/mod/custom/

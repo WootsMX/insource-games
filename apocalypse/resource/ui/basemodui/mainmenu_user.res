@@ -28,7 +28,7 @@
 		"visible"				"1"
 		"enabled"				"1"
 		"tabPosition"			"0"
-		"labelText"				"RUN MAP 'TEST'"
+		"labelText"				"TEST SHADOWS & REFLECTIONS"
 		"style"					"AlienSwarmMenuButtonBig"
 		"command"				"FlmRunA"
 	}
@@ -45,7 +45,7 @@
 		"visible"				"1"
 		"enabled"				"1"
 		"tabPosition"			"0"
-		"labelText"				"RUN MAP 'TEST_COOKIES'"
+		"labelText"				"TEST BOTS"
 		"style"					"AlienSwarmMenuButtonBig"
 		"command"				"FlmRunB"
 	}
@@ -62,7 +62,7 @@
 		"visible"				"1"
 		"enabled"				"1"
 		"tabPosition"			"0"
-		"labelText"				"RUN MAP 'TEST_VOLUMETRICS'"
+		"labelText"				"START ASSAULT DEMO"
 		"style"					"AlienSwarmMenuButtonBig"
 		"command"				"FlmRunC"
 	}
