@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\CODMW2\rangers\face3"
+  	"$bumpmap" "models\CODMW2/rangers\face3_norm"
+
+}

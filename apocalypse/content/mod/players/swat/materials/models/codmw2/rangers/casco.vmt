@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\CODMW2\Rangers\casco"
+  	"$bumpmap" "models\CODMW2/Rangers\casco01_norm"
+}

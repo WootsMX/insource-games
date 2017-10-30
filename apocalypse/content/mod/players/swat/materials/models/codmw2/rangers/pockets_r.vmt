@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\CODMW2\rangers\pockets_r"
+  	"$bumpmap" "models\CODMW2/rangers\pockets_r_norm"
+}

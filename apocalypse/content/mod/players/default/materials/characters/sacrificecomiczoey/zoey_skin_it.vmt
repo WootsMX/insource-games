@@ -1,0 +1,20 @@
+patch
+{
+
+include "materials/models/survivors/survivors_it_shared.vmt"
+insert
+{
+$basetexture "characters\SacrificeComicZoey/zoey_skin_D"
+$bumpmap "characters\SacrificeComicZoey/zoey_skin_N"
+$halflambert 1
+$phong 1
+$phongboost 1
+$phongexponent 5
+$phongtint "[1 .85 .85]"
+$phongfresnelranges "[.5 .85 30]"
+$nodecal 1
+$ambientocclusion 1
+$diffuseexp "1.5"
+$lightwarptexture "models\survivors\gambler\gambler_head_wrp"
+}
+}

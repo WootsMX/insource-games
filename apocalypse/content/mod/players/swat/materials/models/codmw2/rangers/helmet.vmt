@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\CODMW2\rangers\helmet"
+  	"$bumpmap" "models\CODMW2/rangers\helmet_norm"										// Boost for ambient cube component of rim lighting
+}

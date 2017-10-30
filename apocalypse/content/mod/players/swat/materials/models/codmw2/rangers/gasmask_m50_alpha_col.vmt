@@ -1,0 +1,12 @@
+// Generated with BravoSix's tool
+// 2/22/2012 7:53:25 PM
+
+"VertexlitGeneric"
+{
+"$basetexture" "models\player\vad36cod_mw3\gasmask_m50_alpha_col"
+"$bumpmap" "models\player\vad36cod_mw3\gasmask_m50_alpha_nml"
+"$translucent" "1"
+}
+
+
+

@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+
+	"$baseTexture" "models\survivors\TeenAngst/zoey_color_legs"
+	"$bumpmap" "models\survivors\TeenAngst/zoey_legs_normal"
+ 	$phong 1
+	$phongboost 0.05
+	$phongexponent 15
+	$phongtint "[1 .85 .85]"
+	$phongfresnelranges "[.5 .85 30]"
+	$nodecal 1
+	$ambientocclusion 1
+}

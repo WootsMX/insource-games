@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Models\Weapons\V_Models\mw2_m4\us_army_sleeve_diffuse"
+	"$bumpmap" "Models\Weapons\V_Models\mw2_m4\us_army_sleeve_normal"
+                "$phong" "1"
+                "$phongboost" "1"
+                "$phongfresnelranges" "[1 8 6]"
+                "$phongexponenttexture" "Models\Weapons\V_Models\mw2_m4\us_army_sleeve_spec"
+                "$phongalbedotint" "1"
+                "$halflambert" "1"
+                "$selfillum" "1"
+}

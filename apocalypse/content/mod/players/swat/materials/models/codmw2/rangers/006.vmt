@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\CODMW2\rangers\006"	
+ 	"$bumpmap" "models/CODMW2/rangers\006_n"
+}

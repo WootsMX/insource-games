@@ -1,0 +1,21 @@
+// Generated with BravoSix's tool
+// 2/22/2012 7:53:25 PM
+
+"VertexlitGeneric"
+{
+"$basetexture" "models\player\vad36cod_mw3\gasmask_m50_iw5_col"
+"$bumpmap" "models\player\vad36cod_mw3\gasmask_m50_iw5_nml"
+
+"$phong" "1"
+"$phongboost" "0.2"		
+"$phongfresnelranges"	"[0.04 0.10 0.10]"
+"$phongexponent" "6"
+"$phongalbedotint" "1"
+
+ "$rimlight" "0" 
+"$rimlightexponent" "12"								
+"$rimlightboost" "0.3"
+}
+
+
+

@@ -1,0 +1,13 @@
+patch
+{
+
+include "materials/models/survivors/survivors_it_shared.vmt"
+insert
+{
+$baseTexture "characters\SacrificeComicZoey/hair"
+$bumpMap "characters\SacrificeComicZoey/hair_N"
+$lightwarptexture  "characters\SacrificeComicZoey/hair_phongwarp"
+$translucent 1
+$nocull 1
+}
+}

@@ -1,0 +1,15 @@
+patch
+{
+
+include "materials/models/survivors/survivors_it_shared.vmt"
+insert
+{
+//$no_draw 1
+$baseTexture "characters\SacrificeComicZoey/Hair_lowered"
+$bumpMap "characters\SacrificeComicZoey/hair_N"
+$alphatest 1
+$AlphaTestReference ".9"
+//$allowalphatocoverage 1
+$nocull 1
+}
+}

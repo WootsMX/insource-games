@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\CODMW2\rangers\glasses"
+  	"$bumpmap" "models\CODMW2/rangers\glasses_norm"
+}

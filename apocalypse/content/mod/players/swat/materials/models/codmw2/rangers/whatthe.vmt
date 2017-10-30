@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\CODMW2\rangers\whatthe"
+  	"$bumpmap" "models\CODMW2/rangers\whatthe_n"
+}
