@@ -71,7 +71,7 @@
 	IsLeader(choices) : "Squad Leader" : "0" =
 	[
 		"0" : "Auto"
-		"1" : "Yes"
+		"1" : "Me"
 	]
 
 	PlayerTeam(choices) : "Team" : "0" =
@@ -80,6 +80,7 @@
 		"2" : "Survivors"
 		"3" : "Soldiers"
 		"4" : "Infected / SCP"
+		"99" : "Random"
 	]
 
 	PlayerClass(choices) : "Class" : "0" =
@@ -92,9 +93,10 @@
 		"5" : "Soldier Level 2 / SCP-049"
 		"6" : "Soldier Level 3 / SCP-106"
 		"7" : "Soldier Medic / SCP-4579"
+		"99" : "Random"
 	]
 
-	BotSkill(choices) : "Skill" : "0" =
+	BotSkill(choices) : "Difficulty" : "0" =
 	[
 		"0" : "Random"
 		"1" : "Easy"
@@ -103,7 +105,7 @@
 		"4" : "Very Hard"
 		"5" : "Ultra Hard"
 		"6" : "Realism/Imposible"
-		"99" : "Game Skill"
+		"99" : "Game Difficulty"
 	]
 
 	BotTacticalMode(choices) : "Tactical Mode" : "1" =
@@ -136,13 +138,11 @@
 	Performance(choices) : "Performance" : 2 : "" =
 	[
 		0 : "Awake"
-		1 : "Visibility"
-		2 : "PVS"
-		3 : "PVS, then visibility"
+		1 : "PVS"
 	]
 
-	BlockLookAround(integer) : "Block 'Looking Around'" : 0 : "Duration in seconds that the Bot will not be able to look at its surroundings. (interesting places, danger sounds, random, etc) - 0 = Disabled"
-	FollowEntity(string) : "Spawn Following Entity" : "" : "Name of the entity that the Bot should start to follow when it spawn."
+	BlockLookAround(integer) : "Block Looking Around" : 0 : "Duration in seconds that the Bot will not be able to look at its surroundings. (interesting places, danger sounds, random, etc) - 0 = Disabled"
+	FollowEntity(string) : "Follow Entity" : "" : "Name of the entity that the Bot should start to follow when it spawn."
 
 	// Outputs
 	output OnSpawn(string) : "Fired when the Bot is spawned." 
