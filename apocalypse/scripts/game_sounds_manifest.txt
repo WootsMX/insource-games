@@ -9,6 +9,8 @@
 	"precache_file" "scripts/sounds/ambient_generic.txt"
 	"precache_file" "scripts/sounds/items.txt"
 	"precache_file" "scripts/sounds/physics.txt"
+	"precache_file" "scripts/sounds/physics_bullet_impact.txt"
+	"precache_file" "scripts/sounds/physics_footsteps.txt"
 	"precache_file" "scripts/sounds/alarms.txt"
 	"precache_file" "scripts/sounds/vehicles.txt"
 	"precache_file" "scripts/sounds/infected.txt"
