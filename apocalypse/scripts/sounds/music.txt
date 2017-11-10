@@ -150,3 +150,12 @@
 	"pitch" "PITCH_NORM"
 	"wave" "#music/hl2/VLVX_song22.wav"
 }
+
+"Music.Assault04"
+{
+	"channel" "CHAN_STATIC"
+	"volume" "1.0"
+	"soundlevel" "SNDLVL_NONE"
+	"pitch" "PITCH_NORM"
+	"wave" "#music/36_Searchlights.mp3"
+}

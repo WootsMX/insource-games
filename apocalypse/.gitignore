@@ -31,10 +31,9 @@
 /content/base/materials/
 /content/base/models/shadertest/
 /content/base/sound/
-/content/mod/_hl2/
 /content/mod/custom/
-/content/mod/helicopter/
-/content/mod/weapons/sound/
+/content/mod/weapons/
+/shaders/
 /voice_ban.dt
 /thanks.txt
 /stats.txt

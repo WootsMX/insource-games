@@ -16,38 +16,27 @@
 
 		"SearchPaths"
 		{
-			// Apocalypse
 			"Game" "|gameinfo_path|."
 
-			// Apocalypse Core
-			"Game" "|gameinfo_path|content/mod/custom"
-			"Game" "|gameinfo_path|content/mod/helicopter"
-			"Game" "|gameinfo_path|content/mod/infected"
-			"Game" "|gameinfo_path|content/mod/players/default"
-			"Game" "|gameinfo_path|content/mod/players/bulldozer"
-			"Game" "|gameinfo_path|content/mod/players/cloacker"
-			"Game" "|gameinfo_path|content/mod/players/polish"
-			"Game" "|gameinfo_path|content/mod/players/swat"
-			"Game" "|gameinfo_path|content/mod/weapons"
+			// Apocalypse Testing Content
+			"Content" "content/mod"
+			"Content" "content/mod/players"
 
 			// InSource Base
+			// The base files for all games with InSource.
 			"Game" "|gameinfo_path|content/base"
 
 			// Alien Swarm
 			"Game" "|all_source_engine_paths|swarm"
 			"Game" "|all_source_engine_paths|swarm_base"
-
-			// Platform
 			"Game" "|all_source_engine_paths|platform"
 
 			// Other Games
+			// Necessary in this way for Hammer to work.
 			"Game" "|gameinfo_path|content/games/left4dead2"
 			"Game" "|gameinfo_path|content/games/left4dead2_dlc1"
 			"Game" "|gameinfo_path|content/games/left4dead2_dlc2"
 			"Game" "|gameinfo_path|content/games/left4dead2_dlc3"
-			//"Game" "|gameinfo_path|content/games/garrysmod"
-			//"Game" "|gameinfo_path|content/games/cstrike"
-			//"Game" "|gameinfo_path|content/games/hl2"
 		}
 	}
 }
